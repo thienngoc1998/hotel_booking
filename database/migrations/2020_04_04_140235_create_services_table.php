@@ -17,8 +17,8 @@ class CreateServicesTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->text('content');
-            $table->string('open_time');
-            $table->string('close_time');
+            $table->string('open_time')->nullable();
+            $table->string('close_time')->nullable();
             $table->string('price');
             $table->timestamps();
         });
