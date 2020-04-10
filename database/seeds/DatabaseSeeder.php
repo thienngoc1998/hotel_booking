@@ -13,6 +13,8 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(CategorySeed::class);
         $this->call(AdminSeed::class);
+         $this->call(ServiceSeed::class);
+        $this->call(RoomSeed::class);
 
     }
 }

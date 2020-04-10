@@ -22,6 +22,7 @@
     <link href="giaodien/css/dashboard.css" rel="stylesheet" type="text/css">
     <!--Icons CSS-->
     <link href="giaodien/css/icons.css" rel="stylesheet" type="text/css">
+    @yield('css')
     <!--Font Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
@@ -70,5 +71,8 @@
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 <script src="giaodien/js/chart.js"></script>
 <script src="giaodien/js/dashboard.js"></script>
+{{--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>--}}
+{{--<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js"></script>--}}
+@yield('javascript')
 </body>
 </html>

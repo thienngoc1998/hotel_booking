@@ -7,7 +7,7 @@
             <li>
                 <a><i class="sl sl-icon-layers"></i> Tình trạng phòng</a>
                 <ul>
-                    <li><a href="dashboard-list.html">Danh sách <span class="nav-tag green">6</span></a></li>
+                    <li><a href="{{route('admin.rooms')}}">Danh sách <span class="nav-tag green">6</span></a></li>
                     <li><a href="dashboard-list.html">Đang sử dụng <span class="nav-tag yellow">1</span></a></li>
                     <li><a href="dashboard-list.html">Hết hạn <span class="nav-tag red">2</span></a></li>
                 </ul>
