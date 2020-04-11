@@ -24,7 +24,6 @@ class AdminController extends Controller
 
     public function changeInfo($id, ChangeInfoRequest $request)
     {
-        dd('11');
         $this->repository->changeInfo($id,$request);
         return redirect()->back();
     }
