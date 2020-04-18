@@ -3,7 +3,7 @@
     Thông tin cá nhân
 @endsection
 @section('content')
-    <div class="dashboard-content">
+
         <div class="dashboard-form">
             <div class="row">
 
@@ -78,5 +78,4 @@
 
             </div>
         </div>
-    </div>
 @endsection

@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Models\Category;
+use App\Models\Room;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -11,6 +13,8 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
+
+
     public function register()
     {
         //
@@ -23,6 +27,14 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-
+      view()->composer('Backend.layouts.nav',function ($view) {
+            $amountRoom = Room::all()->count();
+            $amountRoomExpired = Room::select('count(*)')->whereNotNull('deleted_at');
+            $view->withAmountRoom($amountRoom)
+                ->withAmountRoomExpired($amountRoomExpired);
+      });
+        view()->composer('Frontend.list-room',function ($view) {
+            $view->withCategory(Category::all());
+        });
     }
 }

@@ -27,6 +27,7 @@ class CreateRoomRequest extends FormRequest
             'name' => 'required|unique:rooms,name',
             'amount_bed' => 'required',
             'description' => 'required',
+            'content' => 'required'
         ];
     }
 
@@ -37,6 +38,7 @@ class CreateRoomRequest extends FormRequest
             'name.unique'=>'Tên phòng bắt buộc nhập',
             'amount_bed.required'=>'Số lượng phòng ngủ là bắt buộc nhập',
             'description.required'=>'Mô tả phòng là bắt buộc',
+            'content.required'=>'Thông tin phòng là bắt buộc',
         ];
     }
 }

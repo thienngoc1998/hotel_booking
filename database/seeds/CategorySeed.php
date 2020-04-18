@@ -12,13 +12,33 @@ class CategorySeed extends Seeder
      */
     public function run()
     {
-        for($i=0;$i <=10;$i++)
-        {
-            Category::create([
-                'name' => 'Phòng đơn',
-                'active' => true
-            ]);
-        }
-
+        Category::create([
+            'name' => 'Phòng đơn',
+            'active' => false
+        ]);
+        Category::create([
+            'name' => 'Phòng đôi',
+            'active' => true
+        ]);
+        Category::create([
+            'name' => 'Phòng Studio',
+            'active' => true
+        ]);
+        Category::create([
+            'name' => 'Phòng cỡ lớn',
+            'active' => true
+        ]);
+        Category::create([
+            'name' => 'Phòng tổng thống',
+            'active' => true
+        ]);
+        Category::create([
+            'name' => 'Phòng Murphy',
+            'active' => true
+        ]);
+        Category::create([
+            'name' => 'Phòng họp',
+            'active' => true
+        ]);
     }
 }

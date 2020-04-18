@@ -386,6 +386,11 @@ abstract class AbstractRepo implements RepositoryContract
         return $this;
     }
 
+    public function hasFile(String $string, $request)
+    {
+        return $request->hasFile($string);
+    }
+
     /**
      * Create a new instance of the model's query builder.
      *

@@ -19,6 +19,7 @@ class CreateBooksTable extends Migration
             $table->foreign('id_user')->references('id')->on('users');
             $table->date('check_in');
             $table->date('check_out');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

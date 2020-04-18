@@ -4,7 +4,6 @@
 @endsection
 
 @section('content')
-    <div class="dashboard-content">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-xs-12">
                 <div class="dashboard-list-box">
@@ -57,7 +56,6 @@
                 </div>
             </div>
         </div>
-    </div>
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -85,5 +83,4 @@
                 </div>
             </div>
         </div>
-    </div>
 @endsection

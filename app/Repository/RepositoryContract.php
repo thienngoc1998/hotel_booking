@@ -41,4 +41,6 @@ interface RepositoryContract
     public function whereIn($column, $value);
 
     public function with($relations);
+
+    public function hasFile(String $string ,$request);
 }

@@ -3,7 +3,6 @@
     Sửa thông tin phòng
 @endsection
 @section('content')
-    <div class="dashboard-content">
         <div class="dashboard-form">
             <div class="row">
 
@@ -12,7 +11,7 @@
                     <div class="dashboard-list-box">
                         <h4 class="gray">Thông tin phòng</h4>
                         <div class="dashboard-list-box-static">
-                            <form action="{{route('admin.store-room')}}" method="POST" enctype="multipart/form-data">
+                            <form action="{{route('admin.update-room',$room->id)}}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <!-- Avatar -->
                                 <div class="edit-profile-photo">
@@ -31,17 +30,17 @@
                                     <label>Loại Phòng : *</label>
                                     <select name="cate_type">
                                         <option value="">Hãy chọn loại phòng :</option>
-{{--                                        @foreach($categories as $category)--}}
-{{--                                            <option value="{{$category->id}}">{{$category->name}}</option>--}}
-{{--                                        @endforeach--}}
+                                        @foreach($categories as $category)
+                                            <option value="{{$category->id}}" @if ( $category->id == $room->id ) selected @endif>{{$category->name}}</option>
+                                        @endforeach
                                     </select>
                                     <label>Tên Phòng : *</label>
-                                    <input  type="text" name="name">
+                                    <input  type="text" name="name" value="{{$room->name}}">
 
                                     <label>Số lượng giường *</label>
-                                    <input  type="text" name="amount_bed">
+                                    <input  type="text" name="amount_bed" value="{{$room->amount_bed}}">
                                     <label>Môi tả *</label>
-                                    <textarea name="description" id="" cols="30" rows="10"></textarea>
+                                    <textarea name="description"  id="" cols="30" rows="10">{{$room->description}}</textarea>
 
                                 </div>
 
@@ -76,7 +75,6 @@
                 </div>
             </div>
         </div>
-    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js"></script>
     <script type="text/javascript">
 		const vm = new Vue({

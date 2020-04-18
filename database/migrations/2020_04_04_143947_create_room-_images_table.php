@@ -18,6 +18,7 @@ class CreateRoomImagesTable extends Migration
             $table->integer('id_room')->unsigned();
             $table->foreign('id_room')->references('id')->on('rooms');
             $table->string('image');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

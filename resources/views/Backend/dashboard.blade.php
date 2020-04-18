@@ -3,7 +3,6 @@
     Trang tổng quan
 @endsection
 @section('content')
-    <div class="dashboard-content">
         <div class="row">
 
             <!-- Item -->
@@ -239,5 +238,4 @@
                 </div>
             </div>
         </div>
-    </div>
 @endsection

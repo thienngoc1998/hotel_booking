@@ -15,8 +15,17 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Backend\Admin\AdminController;
 use App\Http\Controllers\Backend\DashboardController;
 
-Route::get('/', function () {
-    return view('welcome');
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+Route::get('home/login', [DashboardController::class, 'getFormLogin'])->name('getFormLogin');
+Route::get('home/register', [DashboardController::class, 'getFormRegister'])->name('getFormRegister');
+Route::post('home/register', [DashboardController::class, 'registerUser'])->name('user-register');
+Route::post('home/login', [DashboardController::class, 'login'])->name('login-user');
+Route::group(['namespace' => 'frontend','as' => 'frontend.'], function () {
+    Route::get('trangchu', [DashboardController::class, 'getHome'])->name('home-hotel');
+    Route::get('list-room', [DashboardController::class, 'getListRoom'])->name('list-room');
+    Route::get('room/{id}', [DashboardController::class, 'getDetailRoom'])->name('detail-room');
 });
 Route::get('admin/login', [LoginController::class, 'showLoginForm'])->name('admin.login-as');
 Route::post('admin/login', [LoginController::class, 'login'])->name('admin.login');

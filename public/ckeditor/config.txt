@@ -1,0 +1,3 @@
+
+
+<textarea id="demo" class="ckeditor"></textarea>

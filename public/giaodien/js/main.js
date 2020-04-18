@@ -18,7 +18,7 @@
       $("#preloader").delay(200).fadeOut("slow");
       $("body").delay(200).css({ "overflow": "visible" });
 
-      
+
       /* Init Wow Js */
       new WOW().init();
 
@@ -163,6 +163,29 @@
     ]
   });
 
+    $('.detail-slider').slick({
+        infinite: true,
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: false,
+        autoplay: true,
+        responsive: [
+            {
+                breakpoint: 1000,
+                settings: {
+                    slidesToShow: 4
+                }
+            },
+            {
+                breakpoint: 500,
+                settings: {
+                    slidesToShow: 2
+                }
+            }
+        ]
+    });
+
   $('.slider-store').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -234,9 +257,9 @@
     });
   }
 
-  $("#contactform").validate({      
+  $("#contactform").validate({
     submitHandler: function() {
-      
+
       $.ajax({
         url : 'mail/contact.php',
         type : 'POST',
@@ -250,7 +273,7 @@
         success : function( result ){
           $('#contactform-error-msg').html( result );
           $("#contactform")[0].reset();
-        }     
+        }
       });
 
     }

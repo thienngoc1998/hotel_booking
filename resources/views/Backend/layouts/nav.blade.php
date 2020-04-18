@@ -7,13 +7,14 @@
             <li>
                 <a><i class="sl sl-icon-layers"></i> Tình trạng phòng</a>
                 <ul>
-                    <li><a href="{{route('admin.rooms')}}">Danh sách <span class="nav-tag green">6</span></a></li>
-                    <li><a href="dashboard-list.html">Đang sử dụng <span class="nav-tag yellow">1</span></a></li>
-                    <li><a href="dashboard-list.html">Hết hạn <span class="nav-tag red">2</span></a></li>
+                    <li><a href="{{route('admin.rooms')}}">Danh sách </a></li>
+                    <li><a href="dashboard-list.html">Hết hạn </a></li>
                 </ul>
             </li>
-            <li><a href="dashboard-booking.html"><i class="sl sl-icon-list"></i> Danh sách Booking </a></li>
-            <li><a href="dashboard-reviews.html"><i class="sl sl-icon-star"></i> Bình luận </a></li>
+            <li><a href="{{route('admin.service')}}"><i class="sl sl-icon-list"></i> Danh sách dịch vụ </a></li>
+            <li><a href="{{route('admin.users')}}"><i class="sl sl-icon-list"></i> Danh sách nguời dùng </a></li>
+{{--            <li><a href="#"><i class="sl sl-icon-list"></i> Danh sách Booking </a></li>--}}
+            <li><a href="{{route('admin.review')}}"><i class="sl sl-icon-star"></i> Bình luận </a></li>
             <li><a href="{{route('admin.logout')}}"><i class="sl sl-icon-power"></i> Đăng xuất</a></li>
         </ul>
     </div>

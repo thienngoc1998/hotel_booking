@@ -16,10 +16,12 @@ class CreateServicesTable extends Migration
         Schema::create('services', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
+            $table->string('image')->default('hotel-bell.jpg');
             $table->text('content');
             $table->string('open_time')->nullable();
             $table->string('close_time')->nullable();
             $table->string('price');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

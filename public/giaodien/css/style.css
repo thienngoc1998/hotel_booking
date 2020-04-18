@@ -9,12 +9,12 @@
 /**
 
  TABLE OF CONTENT
-  
+
   1. Navbar & Header
   2. Banner/Slider
   3. Banner Form
   4. About Section
-  5. Room Section 
+  5. Room Section
   6. Call To Action
   7. Services Section
   8. Review Section
@@ -22,7 +22,7 @@
   10. Newsletter section
   11. Footer
   12. Room Listing
-  13. Room Grid 
+  13. Room Grid
   14. Room Detail Page
   15. Room Detail Tab Page
   16. Blog SIngle page
@@ -317,7 +317,7 @@ Slicknav - a Mobile Menu
 }
 
 
-/* 
+/*
 User Default Style
 Change the following styles to modify the appearance of the menu.
 */
@@ -362,7 +362,7 @@ Change the following styles to modify the appearance of the menu.
   color: #fff;
 }
 
-header.main_header_area.headerstyle-2 .slicknav_btn.slicknav_open:before, 
+header.main_header_area.headerstyle-2 .slicknav_btn.slicknav_open:before,
 header.main_header_area.headerstyle-2 .slicknav_btn.slicknav_collapsed:before{
   color: #fe4e37;
 }
@@ -578,7 +578,7 @@ header.main_header_area.headerstyle-2 .slicknav_nav{top: 74px;}
     background: rgba(0, 0, 0, 0.5);
   }
 
-  .container-fluid>.navbar-collapse, .container-fluid>.navbar-header, 
+  .container-fluid>.navbar-collapse, .container-fluid>.navbar-header,
   .container>.navbar-collapse, .container>.navbar-header{margin: 0;}
 }
 
@@ -1028,7 +1028,7 @@ header{
 	color: #fff;
 	padding: 10px 20px;
 	border-left: 1px solid #fff3;
-	margin: 0; 
+	margin: 0;
 }
 
 .links-left li:first-child,
@@ -1037,7 +1037,7 @@ header{
 	padding-left: 0;
 }
 .links-right li:last-child{
-	padding-right: 0;	
+	padding-right: 0;
 }
 ul.social-links li{
 	border: none;
@@ -1176,7 +1176,7 @@ a.btn-wt{
     background-position: top center;
     }
 
-.slider .swiper-container-horizontal>.swiper-pagination-bullets, 
+.slider .swiper-container-horizontal>.swiper-pagination-bullets,
 .slider .swiper-pagination-custom, .slider .swiper-pagination-fraction{bottom: 40px;}
 
 .slider .swiper-pagination-bullet{
@@ -1245,15 +1245,15 @@ a.btn-wt{
 
 #vid{
 position: absolute;
-  top: 50%; 
+  top: 50%;
   left: 50%;
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  min-width: 100%; 
-  min-height: 100%; 
-  width: auto; 
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
   height: auto;
-  z-index: 0; 
+  z-index: 0;
   overflow: hidden;
 }
 
@@ -1398,7 +1398,7 @@ section.banner.banner-style-1 .swiper-content {
 
 .reserved-form.date-picker-wrapper .month-wrapper{
   box-shadow: 0 0 10px #cccccc57;
-  border:none; 
+  border:none;
   padding: 15px;
   border-radius: 0;
 }
@@ -1440,7 +1440,7 @@ section.banner.banner-style-1 .swiper-content {
 
 .reserved-form.date-picker-wrapper.single-date span{font-size: 14px;}
 
-.reserved-form.date-picker-wrapper table .caption>th:first-of-type, 
+.reserved-form.date-picker-wrapper table .caption>th:first-of-type,
 .reserved-form.date-picker-wrapper table .caption>th:last-of-type{padding: 10px;}
 
 .reserved-form.date-picker-wrapper table .caption th{text-align: left;}
@@ -1448,7 +1448,7 @@ section.banner.banner-style-1 .swiper-content {
 .reserved-form.date-picker-wrapper .month-wrapper table.month2 .caption th{text-align: right;}
 
 .reserved-form.date-picker-wrapper .gap,
-.reserved-form.date-picker-wrapper table .caption .next:hover, 
+.reserved-form.date-picker-wrapper table .caption .next:hover,
 .reserved-form.date-picker-wrapper table .caption .prev:hover{background: transparent;}
 
 .reserved-form.date-picker-wrapper .gap .gap-lines,
@@ -1536,8 +1536,8 @@ form style 1*/
 }
 
 .banner-form.form-style-2 .form-title{
-    border-bottom: 1px solid #f1f1f1; 
-    padding: 15px; 
+    border-bottom: 1px solid #f1f1f1;
+    padding: 15px;
     text-align: center;
     margin: 0;
 }
@@ -1563,7 +1563,7 @@ form style 1*/
 
 .banner-form.form-style-2 select, .banner-form.form-style-2 input,
 .banner-form.form-style-2 .input-group .form-control{
-    border: 1px solid #ccc; 
+    border: 1px solid #ccc;
     color: #444;
     background: #f1f1f1;
     border: none;
@@ -1733,7 +1733,7 @@ form style 1*/
   .image-4{margin-top: 0px;}
 }
 
-/*about-style-1*/ 
+/*about-style-1*/
 
 .about-style-1 .about-heading{
     margin: 15px 30px 0 0;
@@ -2008,7 +2008,7 @@ section.rooms-style3 .room-item{border: 10px solid #ffffff52;}
 .rooms-style3 .room-image:hover .room-content{
   bottom: 0;
   transition: all 0.5s;
-} 
+}
 
 .rooms-style3 .room-content:before {
     content: '';
@@ -2430,9 +2430,9 @@ section.reviews.reviews-style-1{padding-bottom:100px; }
 
 @media(max-width: 991px){
   .reviews-style-1 .section-title{text-align: center; margin-bottom: 60px!important;}
-  
+
   .review-slider1{margin: 0 -15px;}
-} 
+}
 
 @media(max-width: 567px){
   .reviews-style-1:before{width: 100%;}
@@ -2623,7 +2623,7 @@ footer li{
 
 .footer-copyright .row{display: flex; align-items: center;}
 
-.copyright-links{margin-bottom: 10px;} 
+.copyright-links{margin-bottom: 10px;}
 
 .copyright-links li{
 	display: inline-block;
@@ -2821,7 +2821,7 @@ footer li{
 .list-sidebar-item .pretty{width: 100%; margin-right: 0;}
 
 .list-sidebar-item .pretty input:checked~.state.p-warning-o label:before, .list-sidebar-item .pretty.p-toggle .state.p-warning-o label:before,
-.list-sidebar-item .pretty input:checked~.state.p-warning-o label:before, .list-sidebar-item .pretty.p-toggle .state.p-warning-o label:before, 
+.list-sidebar-item .pretty input:checked~.state.p-warning-o label:before, .list-sidebar-item .pretty.p-toggle .state.p-warning-o label:before,
 .list-sidebar-item .pretty.p-default:not(.p-fill) input:checked~.state.p-warning-o label:after{
   border-color: #fe4e37;
 }
@@ -2839,7 +2839,7 @@ footer li{
   padding: 20px;
   text-align: center;
 }
- 
+
 .info-1.list-sidebar-item i{
     font-size: 52px;
     margin-bottom: 20px;
@@ -2969,7 +2969,7 @@ li.pinterest{
 
 section.check-in{padding: 80px;}
 
-.check-in .table-item input, 
+.check-in .table-item input,
 .check-in .table-item select{
     background: #fff;
     color: #333;
@@ -3118,7 +3118,7 @@ detail-reviews*/
   background: transparent;
 }
 
-.sidebar-form.reservation-form .banner-form.form-style-2 select, .sidebar-form.reservation-form .banner-form.form-style-2 input, 
+.sidebar-form.reservation-form .banner-form.form-style-2 select, .sidebar-form.reservation-form .banner-form.form-style-2 input,
 .sidebar-form.reservation-form .banner-form.form-style-2 .input-group .form-control{
   background: #fff;
 }
@@ -3174,7 +3174,7 @@ ul.nav.nav-pills{background: #fbfbfb; margin-bottom: 30px;}
 .nav-pills>li>a{border-radius: 0; color: #444; font-weight: 800; padding: 15px 30px;}
 
 .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{
-  background:#fe4e37; 
+  background:#fe4e37;
 }
 
 ul.amenities li{
@@ -3220,7 +3220,7 @@ ul.amenities li{
 
 .sidebar-search form{
     position: relative;
-} 
+}
 .sidebar-search input{
     background: #f8f9fa;
     border-radius: 20px;
@@ -3353,7 +3353,7 @@ ul.amenities li{
   .recent-content{width: 100%; padding: 15px 0 0;}
 
   .title-right ul, .title-price{display: inline-block;}
-  
+
 }
 
 
@@ -3591,11 +3591,11 @@ section.video-box button.play-btn{position: relative; left: 0; right: 0;}
 .row.team-slider{margin: 0 -15px;}
 
 .team-item{
-  position: relative; 
-  overflow: hidden; 
+  position: relative;
+  overflow: hidden;
   transition: all ease-in-out 0.3s;
   box-shadow: 0 0 15px #cccccc57;
-  margin-bottom: 30px; 
+  margin-bottom: 30px;
 }
 
 .team-item .team-image img{
@@ -3634,12 +3634,12 @@ section.video-box button.play-btn{position: relative; left: 0; right: 0;}
     transition: all ease-in-out 0.3s;
     opacity: 0;
     z-index: 1;
-}  
+}
 
 .team-item:hover:before{
   opacity: 1;
   transition: all ease-in-out 0.3s;
-}  
+}
 
 .team-content h4{
     color: #fe4e37;
@@ -4221,7 +4221,7 @@ section.menu.lunch .menu-item {
 .days li.active a{
     background: #fe4e37;
     color: #fff;
-}   
+}
 
 /* ========================================= */
 /*          Booking Page CSS        */
@@ -4422,7 +4422,7 @@ section.menu.lunch .menu-item {
 
   .res-item a{margin-bottom: 15px;}
 
-  .res-item a:before, .res-item a.active:before, 
+  .res-item a:before, .res-item a.active:before,
   .res-item a.active:after, .res-item a:after{display: none;}
 
   .list-results{text-align: center;}
@@ -4569,7 +4569,7 @@ section.gallery.gallery1{
 }
 .login-content{
     background: #fff;
-    padding: 30px;
+    padding: 30px 500px;
     text-align: center;
 }
 .login-image{
@@ -4578,7 +4578,8 @@ section.gallery.gallery1{
 .login-content .form-btn{
     margin: 15px 0;
 }
-.login-content .form-btn a.btn-orange{
+.login-content .form-btn .btn-orange{
+    height: 37px;
     width: 100%;
     border-radius: 0;
     margin-bottom: 15px;
@@ -5041,7 +5042,7 @@ section.shop-main:before {
 .shop-main .col-md-8{
     width: 70%;
 }
-.shop-main .col-md-4{width: 30%;} 
+.shop-main .col-md-4{width: 30%;}
 
 .single-content .shop-price span{
   font-size: 24px;
@@ -5080,7 +5081,7 @@ section.shop-main:before {
 
 #store-tab-main .tab-content p{margin-bottom: 0;}
 
-#store-tab-main .nav-tabs>li>a:hover, #store-tab-main .nav-tabs>li.active>a, 
+#store-tab-main .nav-tabs>li>a:hover, #store-tab-main .nav-tabs>li.active>a,
 #store-tab-main .nav-tabs>li.active>a, #store-tab-main .nav-tabs>li.active>a:focus{
     color: #fff!important;
     border: none;
@@ -5139,7 +5140,7 @@ table.shop_table.rt-checkout-review-order-table{width: 100%;}
 
 table.shop_table.rt-checkout-review-order-table tr{border: 1px solid #f1f1f1;}
 
-table.shop_table.rt-checkout-review-order-table tr th, 
+table.shop_table.rt-checkout-review-order-table tr th,
 table.shop_table.rt-checkout-review-order-table tr td{padding:10px 15px; font-size: 15px; border: 1px solid #f1f1f1;}
 
 table.shop_table.rt-checkout-review-order-table thead, table.shop_table.rt-checkout-review-order-table tr.order-total{
@@ -5232,7 +5233,7 @@ section.events .news-content h4 {
 }
 
 section.events p.dates{
-  background: #fe4e37; 
+  background: #fe4e37;
   text-align: center;
   font-weight: 700;
   padding: 5px 10px 10px;
@@ -5313,7 +5314,7 @@ section.events .meta span {
     border-bottom: 1px dashed #ddd;
 }
 
-.info ul li:last-child{border: none;} 
+.info ul li:last-child{border: none;}
 
 .sidebar-book-event h4{
   background: #fe4e37;
@@ -5371,7 +5372,7 @@ section.events .meta span {
 
 .calendar-range .date-picker-wrapper{background: transparent; padding: 0; border: none; z-index: 0;}
 
-.calendar-range .date-picker-wrapper.inline-wrapper, 
+.calendar-range .date-picker-wrapper.inline-wrapper,
 .calendar-range .date-picker-wrapper .month-wrapper{width: 100%!important;}
 
 .calendar-range .date-picker-wrapper .month-wrapper table th{padding:10px 0; color:#333;}
@@ -5391,7 +5392,7 @@ section.events .meta span {
 
 .calendar-range .date-picker-wrapper .month-wrapper table .week-name{height: 50px;}
 
-.calendar-range .date-picker-wrapper .month-wrapper table, 
+.calendar-range .date-picker-wrapper .month-wrapper table,
 .calendar-range .date-picker-wrapper .month-wrapper table.month2{width: 48%;}
 
 .calendar-range .date-picker-wrapper .month-wrapper table .day.real-today {
@@ -5404,7 +5405,7 @@ section.events .meta span {
 
 .calendar-range .date-picker-wrapper .month-wrapper{
   box-shadow: 0 0 10px #cccccc57;
-  border-color: #f1f1f1; 
+  border-color: #f1f1f1;
   padding: 15px;
   border-radius: 0;
 }
@@ -5445,7 +5446,7 @@ section.events .meta span {
     background-color: #f1f1f1;
 }
 
-.calendar-range .date-picker-wrapper table .caption .next, 
+.calendar-range .date-picker-wrapper table .caption .next,
 .calendar-range .date-picker-wrapper table .caption .prev{font-size: 18px; padding: 0 15px;}
 
 .calendar-range .date-picker-wrapper .footer{display: none;}
@@ -5453,7 +5454,7 @@ section.events .meta span {
 .calendar-range .date-picker-wrapper.no-shortcuts{padding-bottom: 0;}
 
 @media(max-width: 991px){
-  .calendar-range .date-picker-wrapper .month-wrapper table, 
+  .calendar-range .date-picker-wrapper .month-wrapper table,
   .calendar-range .date-picker-wrapper .month-wrapper table.month2{width: 100%;}
 
   .date-picker-wrapper .gap {
@@ -5493,7 +5494,7 @@ section.events .meta span {
     position: relative;
     top: 0;
     right: -90px;
-} 
+}
 
 .dark-mode:hover{
     right: 0;
@@ -5509,7 +5510,7 @@ section.events .meta span {
     top: 0px;
     right: -90px;
     transition: all ease-in-out 0.5s;
-} 
+}
 
 .light-mode:hover{
     right: 0;

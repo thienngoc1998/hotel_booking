@@ -15,6 +15,13 @@ class CreateReviewsTable extends Migration
     {
         Schema::create('reviews', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('content');
+            $table->boolean('active')->default(true);
+            $table->integer('id_user')->unsigned();
+            $table->foreign('id_user')->references('id')->on('users');
+            $table->integer('id_room')->unsigned();
+            $table->foreign('id_room')->references('id')->on('rooms');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

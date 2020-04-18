@@ -23,6 +23,7 @@ class CreateRoomDetailsTable extends Migration
             $table->foreign('id_room')->references('id')->on('rooms');
             $table->integer('id_service')->unsigned();
             $table->foreign('id_service')->references('id')->on('services');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

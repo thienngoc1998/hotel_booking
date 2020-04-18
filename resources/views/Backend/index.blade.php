@@ -26,6 +26,15 @@
     <!--Font Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <style>
+        .modal-backdrop {
+            display: none;
+        }
+
+        .modal-dialog {
+            margin-top: 200px;
+        }
+    </style>
 </head>
 <body>
 
@@ -45,7 +54,13 @@
 
         @include('Backend.layouts.sticky-nav')
         @include('Backend.layouts.nav')
+        <div class="dashboard-content">
+        <div style="margin-bottom: 20px;">
+            @include('includes.messages')
+        </div>
+
         @yield('content')
+        </div>
         <!-- Content / End -->
         <!-- Copyrights -->
         <div class="copyrights">
@@ -71,7 +86,8 @@
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 <script src="giaodien/js/chart.js"></script>
 <script src="giaodien/js/dashboard.js"></script>
-{{--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>--}}
+<script type="text/javascript" language="javascript" src="ckeditor/ckeditor.js" ></script>
+<script type="text/javascript" language="javascript" src="ckeditor/ckeditor.js" ></script>
 {{--<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js"></script>--}}
 @yield('javascript')
 </body>
