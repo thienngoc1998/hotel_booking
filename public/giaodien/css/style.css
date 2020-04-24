@@ -4081,7 +4081,7 @@ section.menu.lunch .menu-item {
     text-align: center;
     overflow: hidden;
 }
-.res-item a{
+.res-item span{
     display: inline-block;
     height: 60px;
     width: 60px;
@@ -4094,13 +4094,13 @@ section.menu.lunch .menu-item {
     color: #333;
     margin-bottom: 30px;
 }
-.res-item a.active,
-.res-item a:hover{
+.res-item span.active,
+.res-item span:hover{
     background: #fe4e37;
     border-color: #facec8;
     color: #fff;
 }
-.res-item a:after{
+.res-item span:after{
     left: 115%;
     height: 3px;
     width: 104px;
@@ -4110,7 +4110,7 @@ section.menu.lunch .menu-item {
     top: 48%;
     border-radius: 0 5px 5px 0;
 }
-.res-item a:before{
+.res-item span:before{
     right: 115%;
     height: 3px;
     width: 104px;
@@ -4120,17 +4120,17 @@ section.menu.lunch .menu-item {
     top: 48%;
     border-radius: 5px 0 0  5px;
 }
-.res-item a.active:before,
-.res-item a.active:after{
+.res-item span.active:before,
+.res-item span.active:after{
     background: #fe4e37;
 }
-.res-item:first-child a:before{
+.res-item:first-child span:before{
     display: none;
 }
-.res-item:last-child a:after{
+.res-item:last-child span:after{
     display: none;
 }
-.res-item p{
+.res-item span{
     font-weight: 600;
 }
 
