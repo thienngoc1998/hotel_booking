@@ -33,7 +33,7 @@ class AppServiceProvider extends ServiceProvider
             $view->withAmountRoom($amountRoom)
                 ->withAmountRoomExpired($amountRoomExpired);
       });
-        view()->composer('Frontend.list-room',function ($view) {
+        view()->composer(['Frontend.list-room', 'Frontend.select-room'],function ($view) {
             $view->withCategory(Category::all());
         });
     }

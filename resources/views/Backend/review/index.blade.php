@@ -157,10 +157,10 @@ Danh sách review
         <div class="modal-content">
             <div class="modal-header bg-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                <h4 class="modal-title text-white">削除確認</h4>
+                <h4 class="modal-title text-white">{{ trans('button.title') }}</h4>
             </div>
             <div class="modal-body text-center">
-                <p>この会社を本当に削除してもよろしいですか？</p>
+                <p> Bạn có muốn ẩn bình luận không？</p>
             </div>
             <div class="modal-footer">
                 <div class="text-center">

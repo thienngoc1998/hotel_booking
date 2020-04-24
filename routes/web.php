@@ -25,7 +25,7 @@ Route::post('home/login', [DashboardController::class, 'login'])->name('login-us
 Route::group(['namespace' => 'frontend','as' => 'frontend.'], function () {
     Route::get('trangchu', [DashboardController::class, 'getHome'])->name('home-hotel');
     Route::get('list-room', [DashboardController::class, 'getListRoom'])->name('list-room');
-    Route::post('get-room', [DashboardController::class, 'getListRoomRes'])->name('list-room');
+    Route::post('get-room', [DashboardController::class, 'getListRoomRes'])->name('res-list-room');
     Route::get('room/{id}', [DashboardController::class, 'getDetailRoom'])->name('detail-room');
     Route::get('reset-password', [DashboardController::class, 'getFormReset'])->name('reset-pass');
     Route::post('reset-password', [DashboardController::class, 'resetPasswordUser'])->name('reset-pass-user');

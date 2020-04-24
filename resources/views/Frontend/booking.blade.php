@@ -80,83 +80,83 @@
                             </div>
                             <form method="post" action="{{route('frontend.confirm-booking-room')}}">
                                 @csrf
-                            <div class="extra-services mar-top-50">
-                                <h4 class="mar-bottom-30">Add Extra Services</h4>
-                                <ul>
-                                    <li>
-                                        <span class="pretty p-default p-thick p-pulse mar-bottom-15">
-                                            <input type="checkbox">
-                                            <span class="state p-warning-o">
-                                                <label>10 Bedrooms</label>
-                                            </span>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <span class="pretty p-default p-thick p-pulse mar-bottom-15">
-                                            <input type="checkbox">
-                                            <span class="state p-warning-o">
-                                                <label>Wifi</label>
-                                            </span>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <span class="pretty p-default p-thick p-pulse mar-bottom-15">
-                                            <input type="checkbox">
-                                            <span class="state p-warning-o">
-                                                <label>Television</label>
-                                            </span>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <span class="pretty p-default p-thick p-pulse mar-bottom-15">
-                                            <input type="checkbox">
-                                            <span class="state p-warning-o">
-                                                <label>Hot Water</label>
-                                            </span>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <span class="pretty p-default p-thick p-pulse mar-bottom-15">
-                                            <input type="checkbox">
-                                            <span class="state p-warning-o">
-                                                <label>Dinner</label>
-                                            </span>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <span class="pretty p-default p-thick p-pulse mar-bottom-15">
-                                            <input type="checkbox">
-                                            <span class="state p-warning-o">
-                                                <label>Quick Services</label>
-                                            </span>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <span class="pretty p-default p-thick p-pulse mar-bottom-15">
-                                            <input type="checkbox">
-                                            <span class="state p-warning-o">
-                                                <label>A/C</label>
-                                            </span>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <span class="pretty p-default p-thick p-pulse mar-bottom-15">
-                                            <input type="checkbox">
-                                            <span class="state p-warning-o">
-                                                <label>Laundry Services</label>
-                                            </span>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <span class="pretty p-default p-thick p-pulse mar-bottom-15">
-                                            <input type="checkbox">
-                                            <span class="state p-warning-o">
-                                                <label>AirPort Taxi</label>
-                                            </span>
-                                        </span>
-                                    </li>
-                                </ul>
-                            </div>
+{{--                            <div class="extra-services mar-top-50">--}}
+{{--                                <h4 class="mar-bottom-30">Add Extra Services</h4>--}}
+{{--                                <ul>--}}
+{{--                                    <li>--}}
+{{--                                        <span class="pretty p-default p-thick p-pulse mar-bottom-15">--}}
+{{--                                            <input type="checkbox">--}}
+{{--                                            <span class="state p-warning-o">--}}
+{{--                                                <label>10 Bedrooms</label>--}}
+{{--                                            </span>--}}
+{{--                                        </span>--}}
+{{--                                    </li>--}}
+{{--                                    <li>--}}
+{{--                                        <span class="pretty p-default p-thick p-pulse mar-bottom-15">--}}
+{{--                                            <input type="checkbox">--}}
+{{--                                            <span class="state p-warning-o">--}}
+{{--                                                <label>Wifi</label>--}}
+{{--                                            </span>--}}
+{{--                                        </span>--}}
+{{--                                    </li>--}}
+{{--                                    <li>--}}
+{{--                                        <span class="pretty p-default p-thick p-pulse mar-bottom-15">--}}
+{{--                                            <input type="checkbox">--}}
+{{--                                            <span class="state p-warning-o">--}}
+{{--                                                <label>Television</label>--}}
+{{--                                            </span>--}}
+{{--                                        </span>--}}
+{{--                                    </li>--}}
+{{--                                    <li>--}}
+{{--                                        <span class="pretty p-default p-thick p-pulse mar-bottom-15">--}}
+{{--                                            <input type="checkbox">--}}
+{{--                                            <span class="state p-warning-o">--}}
+{{--                                                <label>Hot Water</label>--}}
+{{--                                            </span>--}}
+{{--                                        </span>--}}
+{{--                                    </li>--}}
+{{--                                    <li>--}}
+{{--                                        <span class="pretty p-default p-thick p-pulse mar-bottom-15">--}}
+{{--                                            <input type="checkbox">--}}
+{{--                                            <span class="state p-warning-o">--}}
+{{--                                                <label>Dinner</label>--}}
+{{--                                            </span>--}}
+{{--                                        </span>--}}
+{{--                                    </li>--}}
+{{--                                    <li>--}}
+{{--                                        <span class="pretty p-default p-thick p-pulse mar-bottom-15">--}}
+{{--                                            <input type="checkbox">--}}
+{{--                                            <span class="state p-warning-o">--}}
+{{--                                                <label>Quick Services</label>--}}
+{{--                                            </span>--}}
+{{--                                        </span>--}}
+{{--                                    </li>--}}
+{{--                                    <li>--}}
+{{--                                        <span class="pretty p-default p-thick p-pulse mar-bottom-15">--}}
+{{--                                            <input type="checkbox">--}}
+{{--                                            <span class="state p-warning-o">--}}
+{{--                                                <label>A/C</label>--}}
+{{--                                            </span>--}}
+{{--                                        </span>--}}
+{{--                                    </li>--}}
+{{--                                    <li>--}}
+{{--                                        <span class="pretty p-default p-thick p-pulse mar-bottom-15">--}}
+{{--                                            <input type="checkbox">--}}
+{{--                                            <span class="state p-warning-o">--}}
+{{--                                                <label>Laundry Services</label>--}}
+{{--                                            </span>--}}
+{{--                                        </span>--}}
+{{--                                    </li>--}}
+{{--                                    <li>--}}
+{{--                                        <span class="pretty p-default p-thick p-pulse mar-bottom-15">--}}
+{{--                                            <input type="checkbox">--}}
+{{--                                            <span class="state p-warning-o">--}}
+{{--                                                <label>AirPort Taxi</label>--}}
+{{--                                            </span>--}}
+{{--                                        </span>--}}
+{{--                                    </li>--}}
+{{--                                </ul>--}}
+{{--                            </div>--}}
                             <div class="personal-info mar-top-50">
                                 <div class="form-title">
                                     <span>1</span>
@@ -188,11 +188,8 @@
                             <div class="card-info mar-top-50">
                                 <div class="row">
                                     <div class="col-md-12 mar-top-15">
-                                        <div class="form-group mar-bottom-30">
-                                            <input type="checkbox"> I agree to the <a href="#">Terms and Conditions</a>
-                                        </div>
                                         <div class="card-btn">
-                                            <button type="submit" class="btn btn-orange">CONFIRM BOOKING</button>
+                                            <button type="submit" class="btn btn-orange"> Xác nhận đặt phòng </button>
                                         </div>
                                     </div>
                                 </div>

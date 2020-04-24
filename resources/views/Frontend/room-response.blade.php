@@ -29,7 +29,7 @@
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
-                            @endif
+                        @endif
                     </div>
                 </div>
                 <div class="room-detail">
@@ -47,9 +47,8 @@
                 </div>
 
                 <div class="grid-btn mar-top-20">
-                    <a href="{{route('frontend.detail-room',$room->id)}}" class="btn btn-black mar-right-10">VIEW
-                        DETAILS</a>
-                    <a href="#" class="btn btn-orange">BOOK NOW</a>
+                    <a href="{{route('frontend.detail-room',$room->id)}}" class="btn btn-black mar-right-10"> Chi tiết phòng </a>
+                    <a href="{{route('frontend.booking-room',$room->id)}}" class="btn btn-orange"> Đặt phòng </a>
                 </div>
             </div>
         </div>

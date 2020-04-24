@@ -41,7 +41,7 @@
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="{{route('frontend.home-hotel')}}">
                         <img alt="logo" src="giaodien/images/logo.png" class="logo-white">
                         <img alt="logo1" src="giaodien/images/logo-black.png" class="logo-black">
                     </a>
