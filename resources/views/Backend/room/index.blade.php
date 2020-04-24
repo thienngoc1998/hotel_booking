@@ -24,8 +24,8 @@
                                                 </div>
                                                 <p>{{$room->description}}</p>
                                             </div>
-                                            <a href="{{route('admin.form-update-room',$room->id)}}" class="button gray"><i class="sl sl-icon-pencil"></i> Edit</a>
-                                            <a href="#" class="button gray" data-toggle="modal" data-target="#modalDelete" data-delete-url="{{route('admin.delete-room', $room->id)}}"><i class="sl sl-icon-close"></i> Delete</a>
+                                            <a href="{{route('admin.form-update-room',$room->id)}}" class="button gray"><i class="sl sl-icon-pencil"></i> Sửa</a>
+                                            <a href="#" class="button gray" data-toggle="modal" data-target="#modalDelete" data-delete-url="{{route('admin.delete-room', $room->id)}}"><i class="sl sl-icon-close"></i> Xoá</a>
                                         </div>
 
                                     </div>

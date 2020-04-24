@@ -1,6 +1,6 @@
 @extends('Backend.index')
 @section('title')
-
+Quản lý người dùng
 @endsection
 
 @section('content')
@@ -8,7 +8,7 @@
             <div class="col-lg-12 col-md-12 col-xs-12">
                 <div class="dashboard-list-box">
 
-                    <h4 class="gray">Loại phòng</h4>
+                    <h4 class="gray">Người dùng</h4>
                     <a href="{{route('admin.create-user')}}" class="btn btn-success" style="margin: 20px 0;"><i class="fas fa-plus"></i>Thêm </a>
                     <div class="table-box">
                         <table class="basic-table booking-table">

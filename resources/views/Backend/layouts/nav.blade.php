@@ -8,7 +8,6 @@
                 <a><i class="sl sl-icon-layers"></i> Tình trạng phòng</a>
                 <ul>
                     <li><a href="{{route('admin.rooms')}}">Danh sách </a></li>
-                    <li><a href="dashboard-list.html">Hết hạn </a></li>
                 </ul>
             </li>
             <li><a href="{{route('admin.service')}}"><i class="sl sl-icon-list"></i> Danh sách dịch vụ </a></li>

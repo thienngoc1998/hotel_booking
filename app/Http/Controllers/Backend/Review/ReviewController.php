@@ -20,6 +20,6 @@ class ReviewController extends Controller
         Review::find($id)->update([
             'active' => false
         ]);
-        return redirect()->back()->withFlashSuccess(__('alert.created'));
+        return redirect()->back()->withFlashSuccess(__('alert.deleted'));
     }
 }

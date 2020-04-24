@@ -36,7 +36,7 @@ class RoomController extends Controller
 
     public function getFormUpdate($id, Request $request)
     {
-        $room = $this->repository->updateRoom($id, $request);
+        $room = $this->repository->getById($id);
         return view('Backend.room.update')->withRoom($room)
             ->withCategories($this->repository->getAllCategories());
     }

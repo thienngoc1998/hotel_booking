@@ -49,7 +49,18 @@ class RoomRepository extends AbstractRepo
                 ]);
             }
             else {
-                $this->create($request->only('name','description','amount_bed','id_cate'));
+                $this->model()::create([
+                    'name' => $request->name,
+                    'amount_bed' => $request->amount_bed,
+                    'description' => $request->description,
+                    'id_cate' => $request->id_cate,
+                    'content' => $request->all()['content_room'],
+                    'size' => $request->size,
+                    'status' => $request->status,
+                    'active' => $request->active,
+                    'price' => $request->price,
+                    'id_service' => 1,
+                ]);
             }
     }
 
@@ -64,11 +75,28 @@ class RoomRepository extends AbstractRepo
                 'avatar' => $file->getClientOriginalName(),
                 'amount_bed' => $request->amount_bed,
                 'description' => $request->description,
-                'id_cate' => $request->cate_type
+                'id_cate' => $request->cate_type,
+                'content' => $request->all()['content_room'],
+                'size' => $request->size,
+                'status' => $request->status,
+                'active' => $request->active,
+                'price' => $request->price,
+                'id_service' => 1,
             ]);
         }
         else {
-            return $this->updateById($id,$request->only('name','description','amount_bed','id_cate'));
+            return $this->model()::find($id)->update([
+                'name' => $request->name,
+                'amount_bed' => $request->amount_bed,
+                'description' => $request->description,
+                'id_cate' => $request->cate_type,
+                'content' => $request->content_room,
+                'size' => $request->size,
+                'status' => $request->status,
+                'active' => $request->active,
+                'price' => $request->price,
+                'id_service' => 1,
+            ]);
         }
     }
 
