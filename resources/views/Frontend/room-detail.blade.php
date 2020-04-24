@@ -122,18 +122,18 @@
                         </div>
                         <div id="exTab1">
                             <ul class="nav nav-pills">
-                                <li class=""><a href="#1a" data-toggle="tab" aria-expanded="false">Overview</a></li>
-                                <li class=""><a href="#2a" data-toggle="tab" aria-expanded="false">Price/Rate</a></li>
-                                <li class="active"><a href="#3a" data-toggle="tab" aria-expanded="true">Places Around</a></li>
-                                <li class=""><a href="#4a" data-toggle="tab" aria-expanded="false">Location/Map</a></li>
-                                <li class=""><a href="#5a" data-toggle="tab" aria-expanded="false">Reviews(3)</a></li>
+                                <li class=""><a href="#1a" data-toggle="tab" aria-expanded="false"> Tổng quan </a></li>
+                                <li class=""><a href="#2a" data-toggle="tab" aria-expanded="false"> Gía phòng </a></li>
+                                <li class="active"><a href="#3a" data-toggle="tab" aria-expanded="true"> Dịch vụ </a></li>
+                                <li class=""><a href="#4a" data-toggle="tab" aria-expanded="false">Vị trí </a></li>
+                                <li class=""><a href="#5a" data-toggle="tab" aria-expanded="false"> Đánh giá (3)</a></li>
                             </ul>
 
                             <div class="tab-content clearfix">
                                 <div class="tab-pane" id="1a">
                                     <div class="detail-overview detail-box">
                                         <h4>Thông tin chi tiết</h4>
-{{--                                        {{$room->detail->content}}--}}
+                                        {!!$room->content !!}
                                         <ul class="amenities">
                                             <li><i class="fa fa-bed" aria-hidden="true"></i> {{$room->amount_bed}} Bedrooms</li>
                                             <li><i class="fa fa-wifi" aria-hidden="true"></i> Wifi</li>
@@ -164,13 +164,13 @@
                                             </thead>
                                             <tbody>
                                             <tr>
-                                                <td>$1200</td>
-                                                <td>$1200</td>
-                                                <td>$1200</td>
-                                                <td>$1200</td>
-                                                <td>$1200</td>
-                                                <td>$1200</td>
-                                                <td>$1200</td>
+                                                <td>{{$room->price}} VND</td>
+                                                <td>{{$room->price}} VND</td>
+                                                <td>{{$room->price}} VND</td>
+                                                <td>{{$room->price}} VND</td>
+                                                <td>{{$room->price}} VND</td>
+                                                <td>{{$room->price}} VND</td>
+                                                <td>{{$room->price}} VND</td>
                                             </tr>
                                             </tbody>
                                         </table>
@@ -286,6 +286,7 @@
                                                 </li>
                                             </ul>
                                         </div>
+                                        @if(\Illuminate\Support\Facades\Auth::check())
                                         <div class="comment-box">
                                             <h4>Leave a message</h4>
                                             <form>
@@ -313,6 +314,7 @@
                                                 </div>
                                             </form>
                                         </div>
+                                        @endif
                                     </div>
                                 </div>
                             </div>

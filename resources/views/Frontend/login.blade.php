@@ -35,7 +35,7 @@
             </div>
             <div class="form-group form-checkbox">
                 <input type="checkbox"> Remember Me
-                <a href="#">Quên mật khẩu?</a>
+                <a href="{{route('frontend.reset-pass')}}">Quên mật khẩu?</a>
             </div>
 
         <div class="form-btn">

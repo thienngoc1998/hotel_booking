@@ -21,6 +21,14 @@ class CreateRoomsTable extends Migration
             $table->integer('amount_bed');
             $table->integer('id_cate')->unsigned();
             $table->foreign('id_cate')->references('id')->on('categories');
+            $table->text('content');
+            $table->integer('size')->default(14);
+            $table->boolean('status')->default(0);
+            $table->boolean('active')->default(1);
+            $table->string('star')->default(1);
+            $table->string('price');
+            $table->integer('id_service')->unsigned();
+            $table->foreign('id_service')->references('id')->on('services');
             $table->softDeletes();
             $table->timestamps();
         });

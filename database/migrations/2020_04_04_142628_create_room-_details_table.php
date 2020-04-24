@@ -15,14 +15,9 @@ class CreateRoomDetailsTable extends Migration
     {
         Schema::create('room-details', function (Blueprint $table) {
             $table->increments('id');
-            $table->text('content');
-            $table->integer('size')->default(14);
-            $table->boolean('status')->default(0);
-            $table->boolean('active')->default(1);
+
             $table->integer('id_room')->unsigned();
             $table->foreign('id_room')->references('id')->on('rooms');
-            $table->integer('id_service')->unsigned();
-            $table->foreign('id_service')->references('id')->on('services');
             $table->softDeletes();
             $table->timestamps();
         });

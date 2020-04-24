@@ -16,7 +16,6 @@ class CreateBookDetailsTable extends Migration
         Schema::create('book-details', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('adult');
-            $table->integer('child')->default(0);
             $table->integer('id_book')->unsigned();
             $table->foreign('id_book')->references('id')->on('books');
             $table->integer('id_room')->unsigned();

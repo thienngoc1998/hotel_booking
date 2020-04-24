@@ -55,7 +55,8 @@
                                 <div class="my-profile">
                                     <label class="margin-top-0">Kích thước : </label>
                                     <input type="text" name="size">
-
+                                    <label class="margin-top-0">Gía : </label>
+                                    <input type="text" name="price">
                                     <label>Nổi bật: *</label>
                                     <input type="radio" name="status" value="1" checked >Có
                                     <input type="radio" name="status" value="0" style="margin-left: 15px;">Không
@@ -65,7 +66,7 @@
                                     <input type="radio" name="active" value="0" style="margin-left: 15px;">Không
 
                                     <label>Thông tin phòng: *</label>
-                                    <textarea id="demo" class="ckeditor" name="content"></textarea>
+                                    <textarea id="demo" class="ckeditor" name="content_room"></textarea>
 
                                 </div>
                                 <button class="button" type="submit">Tạo phòng </button>

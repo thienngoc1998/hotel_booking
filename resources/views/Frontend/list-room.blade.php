@@ -26,55 +26,25 @@
                             <p class="mar-0">Showing 1-5 of 80 results</p>
                         </div>
                         <div class="click-menu pull-right">
-                            <div class="dropdown bootstrap-select bs3" style="width: 120px;"><select class="selectpicker" data-width="120px" title="Sort By" tabindex="-98"><option class="bs-title-option" value=""></option>
-                                    <option data-icon="fa fa-long-arrow-alt-up" value="0">Price</option>
-                                    <option data-icon="fa fa-user" value="1">Name</option>
-                                    <option data-icon="fa fa-star" value="1">Rating</option>
-                                </select><button type="button" class="btn dropdown-toggle btn-default bs-placeholder" data-toggle="dropdown" role="combobox" aria-owns="bs-select-1" aria-haspopup="listbox" aria-expanded="false" title="Sort By"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">Sort By</div></div> </div><span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open"><div class="inner open" role="listbox" id="bs-select-1" tabindex="-1"><ul class="dropdown-menu inner " role="presentation"></ul></div></div></div>
-                            <div class="change-list f-active mar-right-10"><a href="roomlist-1.html"><i class="fa fa-bars"></i></a></div>
-                            <div class="change-grid"><a href="roomlist-1.html"><i class="fa fa-th"></i></a></div>
+                            <div class="dropdown bootstrap-select bs3" style="width: 120px;">
+                                <select class="selectpicker" data-width="120px" title=" Sắp xếp " id="dropDownId">
+                                    <option class="bs-title-option" value=""></option>
+                                    <option data-icon="fa fa-long-arrow-alt-up" value="0"> Giá </option>
+                                    <option data-icon="fa fa-user" value="1"> Tên </option>
+                                    <option data-icon="fa fa-star" value="2"> Sao </option>
+                                </select>
+
+                                <div class="dropdown-menu open">
+                                    <div class="inner open" role="listbox" id="bs-select-1" tabindex="-1">
+                                        <ul class="dropdown-menu inner " role="presentation"></ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="list-content">
                         <div class="list-grid">
-                            @foreach($rooms as $room)
-                            <div class="room-grid">
-                                <div class="grid-image">
-                                    <img src="upload/images/room-list/{{$room->avatar}}" alt="image">
-                                </div>
-                                <div class="grid-content">
-                                    <div class="room-title">
-                                        <h4>{{$room->name}}</h4>
-                                        <p class="mar-top-5"><i class="fa fa-tag"></i> $900/Night</p>
-                                        <div class="deal-rating">
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                        </div>
-                                    </div>
-                                    <div class="room-detail">
-                                        <p> {{$room->description}}</p>
-                                    </div>
-                                    <div class="room-services">
-                                        <div class="row">
-                                            <div class="col-md-6 col-sm-6 col-xs-6">
-                                                <i class="fa fa-bed" aria-hidden="true"></i> {{$room->amount_bed}}
-                                            </div>
-                                            <div class="col-md-6 col-sm-6 col-xs-6">
-                                                <i class="fa fa-wifi" aria-hidden="true"></i> Quick Service
-                                            </div>
-                                        </div>
-                                    </div>
 
-                                    <div class="grid-btn mar-top-20">
-                                        <a href="{{route('frontend.detail-room',$room->id)}}" class="btn btn-black mar-right-10">VIEW DETAILS</a>
-                                        <a href="#" class="btn btn-orange">BOOK NOW</a>
-                                    </div>
-                                </div>
-                            </div>
-                            @endforeach
                         </div>
                     </div>
                     <div class="pagination-content text-center">
@@ -96,7 +66,7 @@
                             <h4>Loại phòng</h4>
                             @foreach($category as $item)
                                 <div class="pretty p-default p-thick p-pulse mar-bottom-15">
-                                    <input type="checkbox" value="{{$item->id}}" name="category">
+                                    <input type="checkbox" class="common_selector type_room" value="{{$item->id}}" name="category">
                                     <div class="state p-warning-o">
                                         <label>{{$item->name}}</label>
                                     </div>
@@ -110,14 +80,16 @@
                                     <span class="min-value">0 $</span>
                                     <span class="max-value">2000 $</span>
                                     <div class="ui-slider-range ui-widget-header ui-corner-all full" style="left: 0%; width: 100%;"></div>
-                                    <div class="ui-slider-range ui-widget-header ui-corner-all" style="left: 0%; width: 100%;"></div><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 0%;"></a><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 100%;"></a></div>
+                                    <div class="ui-slider-range ui-widget-header ui-corner-all" style="left: 0%; width: 100%;"></div>
+                                    <a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 0%;"></a>
+                                    <a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 100%;"></a></div>
                                 <div class="clearfix"></div>
                             </div>
                         </div>
                         <div class="ratings list-sidebar-item">
                             <h4>Ratings</h4>
                             <div class="pretty p-default p-thick p-pulse mar-bottom-15">
-                                <input type="checkbox">
+                                <input type="checkbox"  class="common_selector star" value="5">
                                 <div class="state p-warning-o">
                                     <label>
                                         <span class="rating">
@@ -131,11 +103,10 @@
                                 </div>
                             </div>
                             <div class="pretty p-default p-thick p-pulse mar-bottom-15">
-                                <input type="checkbox">
+                                <input type="checkbox"  class="common_selector star" value="4">
                                 <div class="state p-warning-o">
                                     <label>
                                         <span class="rating">
-                                            <span class="fa fa-star"></span>
                                             <span class="fa fa-star"></span>
                                             <span class="fa fa-star"></span>
                                             <span class="fa fa-star"></span>
@@ -145,8 +116,8 @@
                                 </div>
                             </div>
                             <div class="pretty p-default p-thick p-pulse mar-bottom-15">
-                                <input type="checkbox">
-                                <div class="state p-warning-o">
+                                <input type="checkbox" class="common_selector star" value="3">
+                                <div class="state p-warning-o" >
                                     <label>
                                         <span class="rating">
                                             <span class="fa fa-star"></span>
@@ -157,7 +128,7 @@
                                 </div>
                             </div>
                             <div class="pretty p-default p-thick p-pulse mar-bottom-15">
-                                <input type="checkbox">
+                                <input type="checkbox" class="common_selector star" value="2">
                                 <div class="state p-warning-o">
                                     <label>
                                         <span class="rating">
@@ -168,7 +139,7 @@
                                 </div>
                             </div>
                             <div class="pretty p-default p-thick p-pulse">
-                                <input type="checkbox">
+                                <input type="checkbox" class="common_selector star" value="1">
                                 <div class="state p-warning-o">
                                     <label>
                                         <span class="rating">
@@ -234,4 +205,61 @@
             </div>
         </div>
     </section>
+
 @endsection
+@section('script')
+    <script>
+        $(document).ready(function(){
+            $.ajaxSetup({
+
+                headers: {
+
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+
+                }
+
+            });
+            filter_data();
+
+            function filter_data() {
+                let sort = $('#dropDownId').val();
+                console.log(sort);
+                let categories = get_filter('type_room');
+                let star = get_filter('star');
+                $.ajax({
+                    type:'POST',
+                    url:'/get-room',
+                    data:{categories : categories,star : star, sort: sort},
+
+                    success:function(data){
+                        if(data.html === "" ) {
+                            $('.list-grid').html("<h3 class='text-center'>Không có dữ liệu </h3>");
+                        } else {
+                            $('.list-grid').html(data.html);
+                        }
+
+
+                    }
+
+                });
+            }
+
+            $('#dropDownId').on('change',function(){
+                filter_data();
+            });
+
+            $('.common_selector').click(function(){
+                filter_data();
+            });
+
+        });
+        function get_filter(class_name)
+        {
+            var filter = [];
+            $('.'+class_name+':checked').each(function(){
+                filter.push($(this).val());
+            });
+            return filter;
+        }
+    </script>
+    @endsection

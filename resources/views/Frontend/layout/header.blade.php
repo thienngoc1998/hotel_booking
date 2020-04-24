@@ -162,7 +162,7 @@
                         </li>
                     </ul>
                     <div class="nav-btn">
-                        <a href="#" class="btn btn-orange">Book Now</a>
+                        <a href="{{route('frontend.availability')}}" class="btn btn-orange">Book Now</a>
                     </div>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->

@@ -1,6 +1,7 @@
 <?php
 
 
+use App\Star;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -18,6 +19,7 @@ class DatabaseSeeder extends Seeder
         $this->call(RoomSeed::class);
         $this->call(UserSeed::class);
         $this->call(ReviewSeed::class);
+        $this->call(StarSeed::class);
 
 
     }

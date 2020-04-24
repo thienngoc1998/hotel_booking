@@ -17,6 +17,11 @@ class RoomSeed extends Seeder
             'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex neque, sodales accumsan sapien et, auctor vulputate quam donec vitae consectetur turpis',
             'amount_bed' => 3,
             'id_cate' => 1,
+            'content' =>'sssss',
+            'star' => 2,
+            'price' =>'500000',
+
+            'id_service' =>1
         ]);
         \Illuminate\Support\Facades\DB::table('rooms')->insert([
             'name' => 'DELUXE SUITE',
@@ -24,6 +29,10 @@ class RoomSeed extends Seeder
             'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex neque, sodales accumsan sapien et, auctor vulputate quam donec vitae consectetur turpis',
             'amount_bed' => 3,
             'id_cate' => 1,
+            'content' =>'sssss',
+            'star' => 1,
+            'price' =>'1000000',
+            'id_service' =>1
         ]);
         \Illuminate\Support\Facades\DB::table('rooms')->insert([
             'name' => 'SUPERIOR SUITE',
@@ -31,6 +40,10 @@ class RoomSeed extends Seeder
             'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex neque, sodales accumsan sapien et, auctor vulputate quam donec vitae consectetur turpis',
             'amount_bed' => 3,
             'id_cate' => 1,
+            'content' =>'sssss',
+            'star' => 3,
+            'price' =>'200000',
+            'id_service' =>1
         ]);
         \Illuminate\Support\Facades\DB::table('rooms')->insert([
             'name' => 'NORMAL SUITE',
@@ -38,6 +51,10 @@ class RoomSeed extends Seeder
             'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex neque, sodales accumsan sapien et, auctor vulputate quam donec vitae consectetur turpis',
             'amount_bed' => 3,
             'id_cate' => 1,
+            'content' =>'sssss',
+            'star' => 4,
+            'price' =>'300000',
+            'id_service' =>1
         ]);
         \Illuminate\Support\Facades\DB::table('rooms')->insert([
             'name' => 'ROYAL SUITE',
@@ -45,6 +62,10 @@ class RoomSeed extends Seeder
             'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex neque, sodales accumsan sapien et, auctor vulputate quam donec vitae consectetur turpis',
             'amount_bed' => 3,
             'id_cate' => 1,
+            'content' =>'sssss',
+            'star' => 5,
+            'price' =>'400000',
+            'id_service' =>1
         ]);
     }
 }
