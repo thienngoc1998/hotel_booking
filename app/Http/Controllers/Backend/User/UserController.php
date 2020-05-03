@@ -16,7 +16,7 @@ class UserController extends Controller
 {
     public function index()
     {
-        return view('Backend.user.index')->withUsers(User::all()->sortByDesc('id'));
+        return view('Backend.user.index')->withUsers(User::orderBy('id','desc')->paginate(5));
     }
 
     public function destroy($id)

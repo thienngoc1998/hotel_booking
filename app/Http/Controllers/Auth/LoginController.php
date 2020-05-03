@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\LoginRequest;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -27,7 +28,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+//    protected $redirectTo = '/home';
 
     /**
      * Create a new controller instance.
@@ -36,35 +37,29 @@ class LoginController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest')->except('logout');
+        $this->middleware('guest:web')->except('logout');
     }
 
-    public function showLoginForm()
-    {
-        return view('Backend.login');
-    }
+
     public function username()
     {
         return 'email';
     }
 
-    public function login(Request $request)
+    public function login(LoginRequest $request)
     {
-        $credentials = [
-            'email' => $request->email,
-            'password' => $request->password
-        ];
-
-        if (Auth::guard('admin')->attempt($credentials)) {
-            return redirect()->route('admin.dashboard');
+        if (Auth::attempt(['email'=> $request->email,'password' => $request->password]))
+        {
+            return redirect()->route('frontend.home-hotel');
         }
-
-        return redirect()->back();
+        else {
+            return redirect()->back()->withErrors('Tài khoản hoặc mật khẩu không đúng ');
+        }
     }
 
     public function logout()
     {
-        Auth::guard('admin')->logout();
-        return redirect()->route('admin.login-as');
+        Auth::logout();
+        return redirect()->route('frontend.home-hotel');
     }
 }

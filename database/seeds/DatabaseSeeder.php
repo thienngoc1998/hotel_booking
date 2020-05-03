@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
         $this->call(UserSeed::class);
         $this->call(ReviewSeed::class);
         $this->call(StarSeed::class);
+        $this->call(ArticleSeed::class);
 
 
     }

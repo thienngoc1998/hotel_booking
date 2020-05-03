@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend\Room;
 
 use App\Http\Requests\Backend\Room\CreateRoomRequest;
 use App\Http\Requests\Backend\Room\UpadateRoomRequest;
+use App\Models\Room;
 use App\Repository\Room\RoomRepository;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -18,7 +19,7 @@ class RoomController extends Controller
 
     public function getAllRooms()
     {
-        $rooms  = $this->repository->all()->sortByDesc('id');
+        $rooms  = Room::orderBy('id','desc')->paginate(3);
 
         return view('Backend.room.index')->withRooms($rooms);
     }

@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use App\Article;
 use App\Models\Category;
+use App\Models\Review;
 use App\Models\Room;
 use Illuminate\Support\ServiceProvider;
 
@@ -35,6 +37,15 @@ class AppServiceProvider extends ServiceProvider
       });
         view()->composer(['Frontend.list-room', 'Frontend.select-room'],function ($view) {
             $view->withCategory(Category::all());
+        });
+        view()->composer(['Frontend.dashboard'],function ($view) {
+            $articles = Article::orderBy('id','desc')->skip(0)
+                ->take(3)->get();
+            $rooms = Room::orderBy('id','desc')->skip(0)
+                ->take(3)->get();
+            $comments = Review::orderBy('id','desc')->skip(0)
+                ->take(3)->get();
+            $view->withArticles($articles)->withRooms($rooms)->withComments($comments);;
         });
     }
 }

@@ -111,17 +111,17 @@
     <section class="about-us">
         <div class="container">
             <div class="section-title">
-                <h2>About <span>Us</span></h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex neque, sodales accumsan sapien et, auctor vulputate quam donec vitae consectetur turpis</p>
+                <h2>Giới thiệu <span>Chúng tôi</span></h2>
+                <p></p>
             </div>
             <div class="about-outer">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="about-content">
-                            <h3 class="mar-bottom-30">Finest and Luxurious Hotel in the Town</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque varius iaculis gravida. Nunc vel maximus libero. Quisque ligula nisi, hendrerit et scelerisque et, scelerisque vitae magna. Integer sollicitudin, ex auctor iaculis tempor, mauris odio accumsan odio.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque varius iaculis gravida. Nunc vel maximus libero. Quisque ligula nisi, hendrerit et scelerisque et, scelerisque vitae magna. Integer sollicitudin, ex auctor iaculis tempor, mauris odio accumsan odio.</p>
-                            <a class="btn btn-orange mar-top-10">KNOW MORE ABOUT US <i class="fas fa-angle-double-right"></i></a>
+                            <h3 class="mar-bottom-30">Tiện nghi và sang trọng </h3>
+                            <p>Là nhóm khách sạn đạt tiêu chuẩn 5 sao trở lên, tọa lạc ở các địa điểm du lịch, nghỉ dưỡng nổi tiếng trên toàn quốc với thiết kế tinh tế cùng phong cách phục vụ chuyên nghiệp nhằm mang đến cho du khách kì nghỉ tiện nghi và thoải mái. </p>
+
+                            <a href="{{route('frontend.about-hotel')}}" class="btn btn-orange mar-top-10">Biết thêm về chúng tôi  <i class="fas fa-angle-double-right"></i></a>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -154,108 +154,62 @@
     <section class="rooms">
         <div class="container">
             <div class="section-title">
-                <h2>Explore <span>Rooms</span></h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex neque, sodales accumsan sapien et, auctor vulputate quam donec vitae consectetur turpis</p>
+                <h2>Phòng</h2>
             </div>
             <div class="room-outer">
                 <div class="row">
+                    @foreach($rooms as $room)
                     <div class="col-md-4 col-sm-6 col-xs-6">
                         <div class="room-item">
                             <div class="room-image">
-                                <img src="giaodien/images/room1.jpg" alt="image">
+                                <img src="upload/images/room-list/{{$room->avatar}}" alt="image">
                             </div>
                             <div class="room-content">
                                 <div class="room-title">
-                                    <h4>Super Deluxe</h4>
-                                    <p>$1200/Night</p>
+                                    <h4>{{$room->name}}</h4>
+                                    <p>{{$room->price}} VND/Night</p>
                                     <div class="deal-rating">
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
+                                        @if($room->star == 1)
+                                            <span class="fa fa-star checked"></span>
+                                        @elseif ($room->star == 2)
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                        @elseif ($room->star == 3)
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                        @elseif ($room->star == 4)
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                        @elseif ($room->star == 5)
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                        @endif
                                     </div>
                                 </div>
                                 <div class="room-services mar-bottom-15">
                                     <ul>
-                                        <li><i class="fa fa-bed" aria-hidden="true"></i> 3 Bedrooms</li>
+                                        <li><i class="fa fa-bed" aria-hidden="true"></i> {{$room->amount_bed}}</li>
                                         <li><i class="fa fa-wifi" aria-hidden="true"></i> Wifi</li>
                                     </ul>
                                 </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum orci nulla, fermentum in faucibus a, interdum eu nibh.</p>
+                                <p>{{$room->description}}</p>
                                 <div class="room-btns mar-top-20">
-                                    <a href="#" class="btn btn-black mar-right-10">VIEW DETAILS</a>
-                                    <a href="#" class="btn btn-orange">BOOK NOW</a>
+                                    <a href="{{route('frontend.detail-room',$room->id)}}" class="btn btn-black mar-right-10">Chi tiết phòng</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-6 col-xs-6">
-                        <div class="room-item">
-                            <div class="room-image">
-                                <img src="giaodien/images/room2.jpg" alt="image">
-                            </div>
-                            <div class="room-content">
-                                <div class="room-title">
-                                    <h4>Junior Suite</h4>
-                                    <p>$1200/Night</p>
-                                    <div class="deal-rating">
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                    </div>
-                                </div>
-                                <div class="room-services mar-bottom-15">
-                                    <ul>
-                                        <li><i class="fa fa-bed" aria-hidden="true"></i> 3 Bedrooms</li>
-                                        <li><i class="fa fa-wifi" aria-hidden="true"></i> Wifi</li>
-                                    </ul>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum orci nulla, fermentum in faucibus a, interdum eu nibh.</p>
-                                <div class="room-btns mar-top-20">
-                                    <a href="#" class="btn btn-black mar-right-10">VIEW DETAILS</a>
-                                    <a href="#" class="btn btn-orange">BOOK NOW</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-12 col-xs-12">
-                        <div class="room-item">
-                            <div class="room-image">
-                                <img src="giaodien/images/room3.jpg" alt="image">
-                            </div>
-                            <div class="room-content">
-                                <div class="room-title">
-                                    <h4>Executive Suite</h4>
-                                    <p>$1200/Night</p>
-                                    <div class="deal-rating">
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                    </div>
-                                </div>
-                                <div class="room-services mar-bottom-15">
-                                    <ul>
-                                        <li><i class="fa fa-bed" aria-hidden="true"></i> 3 Bedrooms</li>
-                                        <li><i class="fa fa-wifi" aria-hidden="true"></i> Wifi</li>
-                                    </ul>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum orci nulla, fermentum in faucibus a, interdum eu nibh.</p>
-                                <div class="room-btns mar-top-20">
-                                    <a href="#" class="btn btn-black mar-right-10">VIEW DETAILS</a>
-                                    <a href="#" class="btn btn-orange">BOOK NOW</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        @endforeach
                 </div>
             </div>
             <div class="section-btn">
-                <a href="#" class="btn btn-black mar-right-10">EXPLORE ALL ROOMS <i class="fas fa-angle-double-right"></i></a>
+                <a href="{{route('frontend.list-room')}}" class="btn btn-black mar-right-10"> Xem tất cả <i class="fas fa-angle-double-right"></i></a>
             </div>
         </div>
     </section>
@@ -288,8 +242,7 @@
     <section class="services">
         <div class="container">
             <div class="section-title">
-                <h2>Explore <span>Services</span></h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex neque, sodales accumsan sapien et, auctor vulputate quam donec vitae consectetur turpis</p>
+                <h2>Dich vụ </h2>
             </div>
             <div class="service-outer">
                 <div class="row">
@@ -336,49 +289,23 @@
     <section class="reviews">
         <div class="container">
             <div class="section-title title-white">
-                <h2>Explore <span>Reviews</span></h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex neque, sodales accumsan sapien et, auctor vulputate quam donec vitae consectetur turpis</p>
+                <h2> Bình luận </h2>
             </div>
             <div class="review-slider">
+                @foreach($comments as $comment)
                 <div class="slider-item">
                     <div class="slider-image">
-                        <img src="giaodien/images/review1.jpg" alt="image">
+                        <img src="upload/images/user/{{$comment->user->avatar}}" alt="image">
                     </div>
                     <div class="slider-content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod tortor vitae nisi pharetra egestas. Sed egestas sapien libero.</p>
-                        <h4>Micheal Clordy</h4>
-                        <span>Germany</span>
+                        <p>{{$comment->content}}</p>
+                        <h4>{{$comment->user->name}}</h4>
                     </div>
                     <div class="slider-quote">
-                        <img src="giaodien/images/icons/quote.png" alt="Image">
+                        <img src="upload/images/icon/quote.png" alt="Image">
                     </div>
                 </div>
-                <div class="slider-item">
-                    <div class="slider-image">
-                        <img src="giaodien/images/review2.jpg" alt="image">
-                    </div>
-                    <div class="slider-content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod tortor vitae nisi pharetra egestas. Sed egestas sapien libero.</p>
-                        <h4>Ketty Perry</h4>
-                        <span>Australia</span>
-                    </div>
-                    <div class="slider-quote">
-                        <img src="giaodien/images/icons/quote.png" alt="Image">
-                    </div>
-                </div>
-                <div class="slider-item">
-                    <div class="slider-image">
-                        <img src="giaodien/images/review1.jpg" alt="image">
-                    </div>
-                    <div class="slider-content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod tortor vitae nisi pharetra egestas. Sed egestas sapien libero.</p>
-                        <h4>Micheal Clordy</h4>
-                        <span>Germany</span>
-                    </div>
-                    <div class="slider-quote">
-                        <img src="giaodien/images/icons/quote.png" alt="Image">
-                    </div>
-                </div>
+                 @endforeach
             </div>
         </div>
     </section>
@@ -388,72 +315,34 @@
     <section class="news">
         <div class="container">
             <div class="section-title">
-                <h2>Latest <span>News</span></h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex neque, sodales accumsan sapien et, auctor vulputate quam donec vitae consectetur turpis</p>
+                <h2>Tin <span>Tức </span></h2>
             </div>
             <div class="news-outer">
                 <div class="row">
+                    @foreach($articles as $article)
                     <div class="col-md-4 col-sm-6 col-xs-12">
                         <div class="news-item">
                             <div class="news-image">
-                                <img src="giaodien/images/news1.jpg" alt="image">
+                                <img src="upload/images/article/{{$article->img}}" alt="image">
                             </div>
                             <div class="news-content">
-                                <p class="date mar-bottom-5">16 DECEMBER 2019</p>
-                                <h4><a href="single-right.html">Why choose Hotux Hotel to travel this summer</a></h4>
+                                <p class="date mar-bottom-5">{{$article->created_at->format('d/m/Y')}}</p>
+                                <h4><a href="{{route('frontend.article-detail',$article->id)}}">{{$article->title}}</a></h4>
                                 <div class="room-services mar-bottom-10">
                                     <ul>
-                                        <li><a href="single-right.html"><i class="fa fa-user" aria-hidden="true"></i> By Jack Daniels</a></li>
-                                        <li><a href="single-right.html"><i class="fa fa-comment" aria-hidden="true"></i> 3 comments</a></li>
+                                        <li><a href="single-right.html"><i class="fa fa-user" aria-hidden="true"></i> By admin</a></li>
                                     </ul>
                                 </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum orci nulla, fermentum in faucibus a, interdum eu nibh.</p>
-                                <a href="single-left.html">READ MORE <i class="fas fa-angle-double-right"></i></a>
+                                <p>{{$article->desc}}</p>
+                                <a href="{{route('frontend.article-detail',$article->id)}}">READ MORE <i class="fas fa-angle-double-right"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="news-item">
-                            <div class="news-image">
-                                <img src="giaodien/images/news2.jpg" alt="image">
-                            </div>
-                            <div class="news-content">
-                                <p class="date mar-bottom-5">16 DECEMBER 2019</p>
-                                <h4><a href="single-right.html">Why choose Hotux Hotel to travel this summer</a></h4>
-                                <div class="room-services mar-bottom-10">
-                                    <ul>
-                                        <li><a href="single-right.html"><i class="fa fa-user" aria-hidden="true"></i> By Jack Daniels</a></li>
-                                        <li><a href="single-right.html"><i class="fa fa-comment" aria-hidden="true"></i> 3 comments</a></li>
-                                    </ul>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum orci nulla, fermentum in faucibus a, interdum eu nibh.</p>
-                                <a href="single-left.html">READ MORE <i class="fas fa-angle-double-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-12 col-xs-12">
-                        <div class="news-item">
-                            <div class="news-image">
-                                <img src="giaodien/images/news3.jpg" alt="image">
-                            </div>
-                            <div class="news-content">
-                                <p class="date mar-bottom-5">16 DECEMBER 2019</p>
-                                <h4><a href="single-right.html">Why choose Hotux Hotel to travel this summer</a></h4>
-                                <div class="room-services mar-bottom-10">
-                                    <ul>
-                                        <li><a href="single-right.html"><i class="fa fa-user" aria-hidden="true"></i> By Jack Daniels</a></li>
-                                        <li><a href="single-right.html"><i class="fa fa-comment" aria-hidden="true"></i> 3 comments</a></li>
-                                    </ul>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum orci nulla, fermentum in faucibus a, interdum eu nibh.</p>
-                                <a href="single-left.html">READ MORE <i class="fas fa-angle-double-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
+                        @endforeach
                 </div>
             </div>
             <div class="section-btn">
-                <a href="#" class="btn btn-black mar-right-10">EXPLORE ALL <i class="fas fa-angle-double-right"></i></a>
+                <a href="{{route('frontend.article')}}" class="btn btn-black mar-right-10">Xem tất cả <i class="fas fa-angle-double-right"></i></a>
             </div>
         </div>
     </section>

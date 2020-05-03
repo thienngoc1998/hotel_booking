@@ -82,7 +82,7 @@
 <form action="{{route('admin.login')}}" method="post">
     @csrf
     <div class="imgcontainer">
-        <img src="public/img_avatar2.png" alt="Avatar" class="avatar" >
+        <img src="../../../public/img_avatar2.png" alt="Avatar" class="avatar" >
     </div>
 
     <div class="container">

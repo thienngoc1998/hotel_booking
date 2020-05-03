@@ -23,7 +23,7 @@
                 <div class="col-md-9 pull-right">
                     <div class="list-results">
                         <div class="list-results-sort pull-left pad-top-5">
-                            <p class="mar-0">Showing 1-5 of 80 results</p>
+{{--                            <p class="mar-0">Showing 1-5 of 80 results</p>--}}
                         </div>
                         <div class="click-menu pull-right">
                             <div class="dropdown bootstrap-select bs3" style="width: 120px;">
@@ -47,18 +47,18 @@
 
                         </div>
                     </div>
-                    <div class="pagination-content text-center">
-                        <ul class="pagination">
-                            <li><a href="#"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a></li>
-                            <li class="active"><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">...</a></li>
-                            <li><a href="#">10</a></li>
-                            <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
-                        </ul>
-                    </div>
+{{--                    <div class="pagination-content text-center">--}}
+{{--                        <ul class="pagination">--}}
+{{--                            <li><a href="#"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a></li>--}}
+{{--                            <li class="active"><a href="#">1</a></li>--}}
+{{--                            <li><a href="#">2</a></li>--}}
+{{--                            <li><a href="#">3</a></li>--}}
+{{--                            <li><a href="#">4</a></li>--}}
+{{--                            <li><a href="#">...</a></li>--}}
+{{--                            <li><a href="#">10</a></li>--}}
+{{--                            <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>--}}
+{{--                        </ul>--}}
+{{--                    </div>--}}
                 </div>
                 <div class="col-md-3 sidebar pull-left">
                     <div class="list-sidebar">
@@ -72,19 +72,6 @@
                                     </div>
                                 </div>
                             @endforeach
-                        </div>
-                        <div class="price list-sidebar-item">
-                            <h4>Price</h4>
-                            <div class="range-slider">
-                                <div data-min="0" data-max="2000" data-unit="$" data-min-name="min_price" data-max-name="max_price" class="range-slider-ui ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false">
-                                    <span class="min-value">0 $</span>
-                                    <span class="max-value">2000 $</span>
-                                    <div class="ui-slider-range ui-widget-header ui-corner-all full" style="left: 0%; width: 100%;"></div>
-                                    <div class="ui-slider-range ui-widget-header ui-corner-all" style="left: 0%; width: 100%;"></div>
-                                    <a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 0%;"></a>
-                                    <a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 100%;"></a></div>
-                                <div class="clearfix"></div>
-                            </div>
                         </div>
                         <div class="ratings list-sidebar-item">
                             <h4>Ratings</h4>
@@ -149,57 +136,57 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="services list-sidebar-item">
-                            <h4>Services</h4>
-                            <div class="pretty p-default p-thick p-pulse mar-bottom-15">
-                                <input type="checkbox">
-                                <div class="state p-warning-o">
-                                    <label>24/7 Reception</label>
-                                </div>
-                            </div>
-                            <div class="pretty p-default p-thick p-pulse mar-bottom-15">
-                                <input type="checkbox">
-                                <div class="state p-warning-o">
-                                    <label>Parking</label>
-                                </div>
-                            </div>
-                            <div class="pretty p-default p-thick p-pulse mar-bottom-15">
-                                <input type="checkbox">
-                                <div class="state p-warning-o">
-                                    <label>Bar</label>
-                                </div>
-                            </div>
-                            <div class="pretty p-default p-thick p-pulse mar-bottom-15">
-                                <input type="checkbox">
-                                <div class="state p-warning-o">
-                                    <label>Restaurant</label>
-                                </div>
-                            </div>
-                            <div class="pretty p-default p-thick p-pulse mar-bottom-15">
-                                <input type="checkbox">
-                                <div class="state p-warning-o">
-                                    <label>Satellite Television</label>
-                                </div>
-                            </div>
-                            <div class="pretty p-default p-thick p-pulse mar-bottom-15">
-                                <input type="checkbox">
-                                <div class="state p-warning-o">
-                                    <label>Lift/ELevator</label>
-                                </div>
-                            </div>
-                            <div class="pretty p-default p-thick p-pulse">
-                                <input type="checkbox">
-                                <div class="state p-warning-o">
-                                    <label>Luggage Storage </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="info-1 list-sidebar-item">
-                            <i class="fa fa-phone-volume"></i>
-                            <h5>Need help? Call us</h5>
-                            <a href="tel://004542344599" class="phone">+45 423 445 99</a>
-                            <small>Monday to Friday 9.00am - 7.30pm</small>
-                        </div>
+{{--                        <div class="services list-sidebar-item">--}}
+{{--                            <h4>Services</h4>--}}
+{{--                            <div class="pretty p-default p-thick p-pulse mar-bottom-15">--}}
+{{--                                <input type="checkbox">--}}
+{{--                                <div class="state p-warning-o">--}}
+{{--                                    <label>24/7 Reception</label>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="pretty p-default p-thick p-pulse mar-bottom-15">--}}
+{{--                                <input type="checkbox">--}}
+{{--                                <div class="state p-warning-o">--}}
+{{--                                    <label>Parking</label>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="pretty p-default p-thick p-pulse mar-bottom-15">--}}
+{{--                                <input type="checkbox">--}}
+{{--                                <div class="state p-warning-o">--}}
+{{--                                    <label>Bar</label>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="pretty p-default p-thick p-pulse mar-bottom-15">--}}
+{{--                                <input type="checkbox">--}}
+{{--                                <div class="state p-warning-o">--}}
+{{--                                    <label>Restaurant</label>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="pretty p-default p-thick p-pulse mar-bottom-15">--}}
+{{--                                <input type="checkbox">--}}
+{{--                                <div class="state p-warning-o">--}}
+{{--                                    <label>Satellite Television</label>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="pretty p-default p-thick p-pulse mar-bottom-15">--}}
+{{--                                <input type="checkbox">--}}
+{{--                                <div class="state p-warning-o">--}}
+{{--                                    <label>Lift/ELevator</label>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="pretty p-default p-thick p-pulse">--}}
+{{--                                <input type="checkbox">--}}
+{{--                                <div class="state p-warning-o">--}}
+{{--                                    <label>Luggage Storage </label>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                        <div class="info-1 list-sidebar-item">--}}
+{{--                            <i class="fa fa-phone-volume"></i>--}}
+{{--                            <h5>Need help? Call us</h5>--}}
+{{--                            <a href="tel://004542344599" class="phone">+45 423 445 99</a>--}}
+{{--                            <small>Monday to Friday 9.00am - 7.30pm</small>--}}
+{{--                        </div>--}}
                     </div>
                 </div>
             </div>
@@ -262,4 +249,4 @@
             return filter;
         }
     </script>
-    @endsection
+@endsection

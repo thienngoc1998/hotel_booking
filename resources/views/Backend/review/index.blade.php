@@ -141,13 +141,7 @@ Danh sách review
         <!-- Pagination -->
         <div class="clearfix"></div>
         <div class="pagination-container">
-            <nav class="pagination">
-                <ul>
-                    <li><a href="#" class="current-page">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#"><i class="sl sl-icon-arrow-right"></i></a></li>
-                </ul>
-            </nav>
+            @include('includes.pagination', ['paging' => $reviews])
         </div>
         <!-- Pagination / End -->
     </div>
@@ -181,7 +175,6 @@ Danh sách review
     $(document).ready(function () {
         $('#modalDelete').on('show.bs.modal', function(e) {
             var url = $(e.relatedTarget).data('delete-url');
-            console.log(url);
             $(e.currentTarget).find('.btn-delete-submit').attr("href", url);
         });
     });

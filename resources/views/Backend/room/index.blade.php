@@ -34,15 +34,8 @@
                          @endif
                     <!-- Pagination -->
                         <div class="clearfix"></div>
-                        <div class="col-sm-12 pagination-container">
-                            <nav class="pagination">
-                                <ul>
-                                    <li><a href="#"><i class="sl sl-icon-arrow-left"></i></a></li>
-                                    <li><a href="#" class="current-page">1</a></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#"><i class="sl sl-icon-arrow-right"></i></a></li>
-                                </ul>
-                            </nav>
+                        <div class="pagination-container">
+                            @include('includes.pagination', ['paging' => $rooms])
                         </div>
                         <!-- Pagination / End -->
 

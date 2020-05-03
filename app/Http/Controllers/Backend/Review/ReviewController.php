@@ -11,7 +11,7 @@ class ReviewController extends Controller
 
     public function index()
     {
-        $reviews = Review::where('active',true)->get()->sortByDesc('id');
+        $reviews = Review::where('active',true)->orderBy('id','desc')->paginate(5);
         return view('Backend.review.index')->withReviews($reviews);
     }
 

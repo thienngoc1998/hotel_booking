@@ -2,14 +2,22 @@
 
 namespace App\Http\Controllers\Backend;
 
+use App\Article;
+use App\Http\Requests\ChangePassUserRequest;
 use App\Http\Requests\LoginRequest;
 use App\Http\Requests\RegisterUserRequest;
+use App\Http\Requests\UpdateUserRequest;
 use App\Mail\ResetPasswordMail;
 use App\Models\Book;
+use App\Models\Review;
 use App\Models\Room;
 use App\Models\User;
+use App\Star;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Pagination\LengthAwarePaginator;
+use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
@@ -43,7 +51,7 @@ class DashboardController extends Controller
     {
         if (count($params) == 0)
         {
-            return Room::all();
+            return Room::orderBy('id','desc')->paginate(5);
         }
         else {
             $query = Room::query();
@@ -86,24 +94,17 @@ class DashboardController extends Controller
     {
         $rooms = $this->getResultSearch($request->all());
         $returnHTML = view('Frontend.room-response')->withRooms($rooms)->render();
-        return response()->json(array('success' => true, 'html'=>$returnHTML));
+        return response()->json(array('success' => true, 'html'=> $returnHTML));
     }
 
-    public function divRoom()
+    public function paginate($items, $perPage = 5, $page = null, $options = [])
     {
-
+        $page = $page ?: (Paginator::resolveCurrentPage() ?: 1);
+        $items = $items instanceof Collection ? $items : Collection::make($items);
+        return new LengthAwarePaginator($items->forPage($page, $perPage), $items->count(), $perPage, $page, $options);
     }
 
-    public function login(LoginRequest $request)
-    {
-        if (Auth::attempt(['email'=>$request->email,'password' => $request->password]))
-        {
-            return redirect()->route('frontend.home-hotel');
-        }
-        else {
-            return redirect()->back()->withErrors('Tài khoản hoặc mật khẩu không đúng ');
-        }
-    }
+
 
     public function getFormLogin()
     {
@@ -132,7 +133,8 @@ class DashboardController extends Controller
     public function getDetailRoom($id)
     {
         $room = Room::find($id);
-        return view('Frontend.room-detail')->withRoom($room);
+        $comments = Review::where('id_room',$id)->get();
+        return view('Frontend.room-detail')->withRoom($room)->withComments($comments);
     }
 
     public function getFormReset()
@@ -192,5 +194,86 @@ class DashboardController extends Controller
         ]);
         Session::forget('booking');
         return view('Frontend.confirm')->withBook($book);
+    }
+
+    public function getInfoUser($id)
+    {
+        return view('Frontend.user')->withUser(User::findOrFail($id));
+    }
+    public function getFormChangeInfoUser($id)
+    {
+        return view('Frontend.change-info')->withUser(User::findOrFail($id));
+    }
+
+    public function changeInfoUser(UpdateUserRequest $request, $id)
+    {
+        if ($request->hasFile('avatar'))
+        {
+            $file = $request->avatar;
+            $file->move('upload/images/user', $file->getClientOriginalName());
+            User::find($id)->update([
+                'name' => $request->name,
+                'email' => $request->email,
+                'phone' => $request->phone,
+                'avatar' => $file->getClientOriginalName(),
+            ]);
+        } else
+        {
+            User::find($id)->update($request->only('name', 'email', 'phone'));
+        }
+        return redirect()->back()->withFlassSuccess('Thay đổi thông tin thành công !!!');
+    }
+
+    public function getFormChangePassword($id)
+    {
+        return view('Frontend.change-password')->withUser(User::findOrFail($id));
+    }
+
+    public function reviewRoom(Request $request,$id)
+    {
+       $room = Room::findOrFail($id);
+       $value = floor(intval($request->value + $room->star)/2);
+       $room->update([
+           'star' => $value
+       ]);
+       echo ' Đánh giá thành công !!!';
+    }
+
+    public function commentRoom(Request $request, $id)
+    {
+        $comment = Review::create([
+            'content' =>$request->value,
+            'id_user' => $request->userId,
+            'id_room' => $id,
+        ]);
+        $returnHTML = view('Frontend.review-response')->withComment($comment)->render();
+        return response()->json(array('message' => ' Bình luận thành công !!!', 'html'=> $returnHTML),200);
+
+    }
+
+    public function getArticles()
+    {
+        $articles = Article::orderBy('id','desc')->paginate(6);
+        return view('Frontend.article-list')->withArticles($articles);
+    }
+
+    public function getDetailArticle($id)
+    {
+        $article = Article::findOrFail($id);
+        return view('Frontend.detail-article')->withArticle($article);
+    }
+
+    public function changePasswordUser(ChangePassUserRequest $request,$id)
+    {
+        User::find($id)->update([
+           'password' => Hash::make($request->password)
+        ]);
+        Auth::logout();
+        return redirect()->route('getFormLogin');
+    }
+
+    public function getAboutHotel()
+    {
+        return view('Frontend.about');
     }
 }

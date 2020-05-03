@@ -54,13 +54,7 @@ Quản lý người dùng
                     </div>
                 </div>
                 <div class="pagination-container">
-                    <nav class="pagination">
-                        <ul>
-                            <li><a href="#" class="current-page">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#"><i class="sl sl-icon-arrow-right"></i></a></li>
-                        </ul>
-                    </nav>
+                    @include('includes.pagination', ['paging' => $users])
                 </div>
             </div>
         </div>

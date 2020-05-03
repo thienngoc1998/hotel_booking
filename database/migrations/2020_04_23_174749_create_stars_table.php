@@ -18,6 +18,8 @@ class CreateStarsTable extends Migration
             $table->string('star');
             $table->integer('id_room')->unsigned();
             $table->foreign('id_room')->references('id')->on('rooms');
+            $table->integer('id_user')->unsigned();
+            $table->foreign('id_user')->references('id')->on('users');
             $table->timestamps();
         });
     }
