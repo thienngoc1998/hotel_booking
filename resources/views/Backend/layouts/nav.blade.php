@@ -4,6 +4,7 @@
             <li ><a href="{{route('admin.dashboard')}}"><i class="fas fa-dashboard"></i>Trang tổng quan </a></li>
             <li><a href="{{route('admin.profile',Auth::user()->id)}}"><i class="fas fa-r-project"></i> Thông tin cá nhân</a></li>
             <li><a href="{{route('admin.categories')}}"><i class="sl sl-icon-plus"></i> Loại phòng</a></li>
+            <li><a href="{{route('admin.admins')}}"><i class="sl sl-icon-plus"></i> Quản trị viên </a></li>
             <li>
                 <a><i class="sl sl-icon-layers"></i> Phòng</a>
                 <ul>

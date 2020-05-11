@@ -16,11 +16,11 @@ Quản lý người dùng
                             <tr>
                                 <th>ID</th>
                                 <th>Ảnh đại diên</th>
-                                <th>Tên </th>
+                                <th>Họ Tên </th>
                                 <th>Email</th>
                                 <th>Số điện thoại</th>
                                 <th>Ngày tạo</th>
-                                <th>Action</th>
+                                <th>{{__('status.action')}}</th>
                             </tr>
                             </thead>
                             <tbody>

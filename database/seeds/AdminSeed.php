@@ -15,7 +15,23 @@ class AdminSeed extends Seeder
             'name' => 'admin',
             'phone' => '0976801728',
             'email' => 'admin@admin.com',
-            'password' => \Illuminate\Support\Facades\Hash::make('password')
+            'role' => 0 ,
+            'password' => \Illuminate\Support\Facades\Hash::make('password'),
+            'created_at' => now(),
+            'updated_at' => now(),
         ]);
+        for ($i = 1; $i<= 3 ;$i++)
+        {
+            \Illuminate\Support\Facades\DB::table('admins')->insert([
+                'name' => 'admin'.$i,
+                'phone' => '0976801728',
+                'email' => 'admin'.$i.'@admin.com',
+                'role' => $i ,
+                'password' => \Illuminate\Support\Facades\Hash::make('password'),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]);
+        }
+
     }
 }

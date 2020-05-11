@@ -18,7 +18,7 @@ Quản lý loại phòng
                                 <th>Tên loại phòng</th>
                                 <th>Ngày tạo</th>
                                 <th>Trạng thái</th>
-                                <th>Action</th>
+                                <th>{{__('status.action')}}</th>
                             </tr>
                             </thead>
                             <tbody>

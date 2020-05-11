@@ -133,7 +133,7 @@ class DashboardController extends Controller
     public function getDetailRoom($id)
     {
         $room = Room::find($id);
-        $comments = Review::where('id_room',$id)->get();
+        $comments = Review::where('id_room',$id)->where('active','=',1)->orderBy('id','desc')->get();
         return view('Frontend.room-detail')->withRoom($room)->withComments($comments);
     }
 

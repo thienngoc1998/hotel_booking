@@ -23,7 +23,7 @@
                 <div class="col-md-6 col-sm-12 col-xs-12">
                     <div class="about-para mar-top-50">
                         <h4>Vài nét về khách sạn </h4>
-                        <p>Là nhóm khách sạn đạt tiêu chuẩn 5 sao trở lên, tọa lạc ở các địa điểm du lịch, nghỉ dưỡng nổi tiếng trên toàn quốc với thiết kế tinh tế cùng phong cách phục vụ chuyên nghiệp nhằm mang đến cho du khách kì nghỉ tiện nghi và thoải mái. </p>
+                        <p>Là nhóm khách sạn đạt tiêu chuẩn 3 sao trở lên, tọa lạc ở các địa điểm du lịch, nghỉ dưỡng nổi tiếng trên toàn quốc với thiết kế tinh tế cùng phong cách phục vụ chuyên nghiệp nhằm mang đến cho du khách kì nghỉ tiện nghi và thoải mái. </p>
                         <p>Giới thiệu, nhân rộng, lan tỏa những nét đẹp truyền thống, tinh hoa văn hóa và niềm tự hào Việt tới du khách trong và ngoài nước nhằm bảo tồn và xây dựng giá trị văn hóa các dân tộc Việt.
                             Là điểm đến mang đậm văn hóa vùng miền. Mỗi thành viên có vai trò là một sứ giả trong cuộc giao lưu và quảng bá nét đẹp truyền thống dân tộc.</p>
                     </div>

@@ -1,6 +1,6 @@
 @extends('Backend.index')
 @section('title')
-    Danh sách bài viết
+    Quản lý quản trị viên
 @endsection
 
 @section('content')
@@ -8,38 +8,55 @@
         <div class="col-lg-12 col-md-12 col-xs-12">
             <div class="dashboard-list-box">
 
-                <h4 class="gray">Bài viết</h4>
-                <a href="{{route('admin.article-create')}}" class="btn btn-success" style="margin: 20px 0;"><i class="fas fa-plus"></i>Thêm </a>
+                <h4 class="gray">Quản trị viên</h4>
+                <a href="{{route('admin.create-admin')}}" class="btn btn-success" style="margin: 20px 0;"><i class="fas fa-plus"></i>Thêm </a>
                 <div class="table-box">
                     <table class="basic-table booking-table">
                         <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Tên bài viết</th>
-                            <th>Mô tả </th>
-                            <th> Ngày tạo</th>
-                            <th>{{__('status.action')}}</th>
+                            <th>Ảnh đại diên</th>
+                            <th>Tên </th>
+                            <th>Email</th>
+                            <th>Số điện thoại</th>
+                            <th>Ngày tạo</th>
+                            <th> Chức vụ </th>
+                            <th> {{__('status.action')}}</th>
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach($articles as $article)
+                        @foreach($admins as $admin)
                             <tr>
-                                <td>{{$article->id}}</td>
-                                <td>{{$article->title}}</td>
-                                <td>{{$article->desc}}</td>
-                                <td>{{$article->created_at->format('d/m/Y')}}</td>
+                                <td>{{$admin->id}}</td>
+                                <td>
+                                    <img src="upload/images/admin/{{$admin->avatar}}"  height="70" alt="user image">
+                                </td>
+                                <td>{{$admin->name}}</td>
+                                <td>{{$admin->email}}</td>
+                                <td>{{$admin->phone}}</td>
+                                <td>{{$admin->created_at->format('d/m/Y')}}</td>
+                                <td>
+                                    @if($admin->role == 1)
+                                    <span> Nhân viên lễ tân </span>
+                                    @elseif($admin->role == 2)
+                                        <span> Quản lý phòng </span>
+                                    @elseif($admin->role == 3)
+                                        <span> Quản lý dịch vụ  </span>
+                                    @endif
+                                </td>
 
                                 <td>
-                                    <a href="{{route('admin.article-detail',$article->id)}}" class="button success"><i class="fas fa-pencil-alt"></i></a>
-                                    <a href="#" class="button gray" data-toggle="modal" data-target="#modalDelete" data-delete-url="{{route('admin.article-delete', $article->id)}}"><i class="fas fa-times"></i></a>
+                                    <a href="{{route('admin.detail-admin',$admin->id)}}" class="button success"><i class="fas fa-pencil-alt"></i></a>
+                                    <a href="#" class="button gray" data-toggle="modal" data-target="#modalDelete" data-delete-url="{{route('admin.destroy-admin', $admin->id)}}"><i class="fas fa-times"></i></a>
                                 </td>
                             </tr>
                         @endforeach
                         </tbody>
                     </table>
                 </div>
-            </div><div class="pagination-container">
-                @include('includes.pagination', ['paging' => $articles])
+            </div>
+            <div class="pagination-container">
+                @include('includes.pagination', ['paging' => $admins])
             </div>
         </div>
     </div>

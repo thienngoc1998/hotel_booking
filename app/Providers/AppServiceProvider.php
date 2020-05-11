@@ -38,7 +38,7 @@ class AppServiceProvider extends ServiceProvider
         view()->composer(['Frontend.list-room', 'Frontend.select-room'],function ($view) {
             $view->withCategory(Category::all());
         });
-        view()->composer(['Frontend.dashboard'],function ($view) {
+        view()->composer(['Frontend.dashboard','Frontend.room-detail'],function ($view) {
             $articles = Article::orderBy('id','desc')->skip(0)
                 ->take(3)->get();
             $rooms = Room::orderBy('id','desc')->skip(0)

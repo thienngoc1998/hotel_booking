@@ -8,56 +8,40 @@
                 <div class="row">
                     <div class="col-md-3 col-sm-6 col-xs-12">
                         <div class="footer-about">
-                            <h4>Company Info</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius tellus vitae justo blandit ultrices.</p>
-                        </div>
-                        <div class="footer-payment">
-                            <h4>We Accept</h4>
-                            <ul>
-                                <li><img src="giaodien/images/icons/visa.png" alt="image"></li>
-                                <li><img src="giaodien/images/icons/mastercard.png" alt="image"></li>
-                                <li><img src="giaodien/images/icons/americanexpress.png" alt="image"></li>
-                            </ul>
+                            <h4> Thông tin khách sạn </h4>
+                            <p>Sang trọng và đầy đủ tiện nghi </p>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6 col-xs-12">
                         <div class="quick-links">
                             <h4>Quick Links</h4>
                             <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Rooms</a></li>
-                                <li><a href="#">Testimonials</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Gallery</a></li>
-                                <li><a href="#">Services</a></li>
-                                <li><a href="#">Contact</a></li>
+                                <li>Trang chủ </li>
+                                <li>Phòng </li>
+                                <li>Tin tức </li>
+                                <li>Tin tức </li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6 col-xs-12">
                         <div class="Rooms">
-                            <h4>Rooms</h4>
+                            <h4>Quick Links</h4>
                             <ul>
-                                <li><a href="#">Single Rooms</a></li>
-                                <li><a href="#">Double Rooms</a></li>
-                                <li><a href="#">Studio Rooms</a></li>
-                                <li><a href="#">Kingsize Rooms</a></li>
-                                <li><a href="#">Presidentsuite Rooms</a></li>
-                                <li><a href="#">Luxury Kings Rooms</a></li>
-                                <li><a href="#">Connecting Rooms</a></li>
-                                <li><a href="#">Murphy Rooms</a></li>
+                                <li>Trang chủ </li>
+                                <li>Phòng </li>
+                                <li>Tin tức </li>
+                                <li>Tin tức </li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6 col-xs-12">
                         <div class="footer-contact">
-                            <h4>Contact info</h4>
+                            <h4> Liên hệ </h4>
                             <ul>
-                                <li>Tel: 977-222-444-6666</li>
-                                <li>Email: info@hotux.com.np</li>
-                                <li>Fax: 977-222-444-666</li>
-                                <li>Address: 445 Mount Eden Road, Sundarbasti, Chakrapath</li>
+                                <li>Tel: 0977-222-333</li>
+                                <li>Email: syquangbn97@gmail.com </li>
+                                <li>Fax: 0977-222-444</li>
+                                <li>Địa chỉ : Quế Võ , Bắc Ninh, Việt Nam </li>
                             </ul>
                         </div>
                     </div>

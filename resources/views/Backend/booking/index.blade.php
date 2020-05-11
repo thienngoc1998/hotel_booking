@@ -22,6 +22,7 @@
                             <th>Đêm </th>
                             <th>Phòng  </th>
                             <th>Trạng thái </th>
+                            <th>Ngày taọ </th>
                             <th>Action</th>
                         </tr>
                         </thead>
@@ -42,7 +43,7 @@
                                      <span class="unpaid t-box"> Nhận phòng </span>
                                     @endif
                                 </td>
-
+                                <td>{{$book->created_at->format('d/m/Y')}}</td>
                                 <td>
                                     <a href="#"  data-toggle="modal" data-target="#modalActive" data-active-url="{{route('admin.book-change-status', $book->id)}}" class="button success"><i class="fas fa-flag"></i></a>
                                     <a href="#" class="button gray" data-toggle="modal" data-target="#modalDelete" data-delete-url="{{route('admin.book-destroy', $book->id)}}"><i class="fas fa-times"></i></a>
@@ -89,7 +90,7 @@
                     <h4 class="modal-title text-white">{{ trans('button.title') }}</h4>
                 </div>
                 <div class="modal-body text-center">
-                    <p>{{ trans('button.content') }}</p>
+                    <p> Bạn có muốn thay đổi trạng thái không ?</p>
                 </div>
                 <div class="modal-footer">
                     <div class="text-center">

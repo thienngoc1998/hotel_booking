@@ -6,4 +6,4 @@ Route::get('article/create', [\App\Http\Controllers\Backend\Article\ArticleContr
 Route::post('article/create', [\App\Http\Controllers\Backend\Article\ArticleController::class, 'store'])->name('article-store');
 Route::get('article/{id}', [\App\Http\Controllers\Backend\Article\ArticleController::class, 'detail'])->name('article-detail');
 Route::post('article/{id}', [\App\Http\Controllers\Backend\Article\ArticleController::class, 'update'])->name('article-update');
-Route::get('article/delete/{id}', [\App\Http\Controllers\Backend\Article\ArticleController::class, 'destroy'])->name('article-delete');
+Route::get('article/delete/{id}', [\App\Http\Controllers\Backend\Article\ArticleController::class, 'destroy'])->name('article-delete')->middleware('CheckRoleAdmin0');

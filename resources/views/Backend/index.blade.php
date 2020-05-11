@@ -34,6 +34,34 @@
         .modal-dialog {
             margin-top: 200px;
         }
+
+        @media print {
+            .dashboard-sticky-nav {
+                display: none !important;
+            }
+
+            .main-footer {
+                display: none;
+            }
+
+            .dashboard-nav {
+                display: none;
+            }
+            .btn-print , .copyrights, .dashboard-responsive-nav-trigger{
+                display: none !important;
+            }
+            .t-box {
+                overflow: hidden;
+            }
+
+            .tool-navigator {
+                display: none !important;
+            }
+
+            .dashboard-list-box h4.gray {
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -43,7 +71,14 @@
     <div id="status"></div>
 </div>
 <!-- Preloader Ends -->
-
+@if(Session::has('fail'))
+    <script type="text/javascript">
+        alert('Bạn không đủ quyền để truy cập ');
+    </script>
+    <?php
+      Session::forget('fail');
+    ?>
+@endif
 <!-- start Container Wrapper -->
 <div id="container-wrapper">
     <!-- Dashboard -->
@@ -88,6 +123,7 @@
 <script src="giaodien/js/dashboard.js"></script>
 <script type="text/javascript" language="javascript" src="ckeditor/ckeditor.js" ></script>
 <script type="text/javascript" language="javascript" src="ckeditor/ckeditor.js" ></script>
+<script src="https://unpkg.com/sweetalert2@7.18.0/dist/sweetalert2.all.js"></script>
 {{--<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js"></script>--}}
 @yield('javascript')
 </body>

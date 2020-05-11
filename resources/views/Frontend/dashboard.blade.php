@@ -119,7 +119,7 @@
                     <div class="col-md-6">
                         <div class="about-content">
                             <h3 class="mar-bottom-30">Tiện nghi và sang trọng </h3>
-                            <p>Là nhóm khách sạn đạt tiêu chuẩn 5 sao trở lên, tọa lạc ở các địa điểm du lịch, nghỉ dưỡng nổi tiếng trên toàn quốc với thiết kế tinh tế cùng phong cách phục vụ chuyên nghiệp nhằm mang đến cho du khách kì nghỉ tiện nghi và thoải mái. </p>
+                            <p>Là nhóm khách sạn đạt tiêu chuẩn 3 sao trở lên, tọa lạc ở các địa điểm du lịch, nghỉ dưỡng nổi tiếng trên toàn quốc với thiết kế tinh tế cùng phong cách phục vụ chuyên nghiệp nhằm mang đến cho du khách kì nghỉ tiện nghi và thoải mái. </p>
 
                             <a href="{{route('frontend.about-hotel')}}" class="btn btn-orange mar-top-10">Biết thêm về chúng tôi  <i class="fas fa-angle-double-right"></i></a>
                         </div>

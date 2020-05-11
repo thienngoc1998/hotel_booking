@@ -21,7 +21,7 @@
                                 <th>Mở cửa</th>
                                 <th>Đóng cửa </th>
                                 <th>Giá </th>
-                                <th>Action</th>
+                                <th>{{__('status.action')}}</th>
                             </tr>
                             </thead>
                             <tbody>

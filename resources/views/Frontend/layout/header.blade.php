@@ -4,15 +4,8 @@
         <div class="container">
             <div class="links links-left">
                 <ul>
-                    <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i> info@hotux.com.np</a></li>
-                    <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i> 977-222-333-444</a></li>
-                    <li>
-                        <select>
-                            <option>Eng</option>
-                            <option>Fra</option>
-                            <option>Esp</option>
-                        </select>
-                    </li>
+                    <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>syquangbn@gmail.com</a></li>
+                    <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i> 0977-222-333</a></li>
                 </ul>
             </div>
             <div class="links links-right pull-right">
