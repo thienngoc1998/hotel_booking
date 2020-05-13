@@ -57,6 +57,8 @@
                                     <input type="text" name="size">
                                     <label class="margin-top-0">Gía : </label>
                                     <input type="text" name="price">
+                                    <label class="margin-top-0">Số lượng : </label>
+                                    <input type="text" name="number">
                                     <label>Nổi bật: *</label>
                                     <input type="radio" name="status" value="1" checked >Có
                                     <input type="radio" name="status" value="0" style="margin-left: 15px;">Không

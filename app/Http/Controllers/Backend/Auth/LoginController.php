@@ -38,7 +38,7 @@ class LoginController extends Controller
             return redirect()->route('admin.dashboard');
         }
 
-        return redirect()->back();
+        return redirect()->back()->withInput();
     }
 
     public function logout()

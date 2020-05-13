@@ -33,7 +33,14 @@
 <!-- Preloader Ends -->
 
 @include('Frontend.layout.header')
-
+@if(Session::has('fail'))
+    <script type="text/javascript">
+        alert('Không còn phòng trống ');
+    </script>
+    <?php
+    Session::forget('fail');
+    ?>
+@endif
 
 @yield('content')
 

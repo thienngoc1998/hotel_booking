@@ -149,28 +149,28 @@
                                 </div>
                                 <div class="tab-pane" id="2a">
                                     <div class="price-table detail-box">
-                                        <h4>Price and Rates(/Night)</h4>
+                                        <h4>Gía/Đêm </h4>
                                         <table class="table table-bordered">
                                             <thead>
                                             <tr>
-                                                <td>Sun</td>
-                                                <td>Mon</td>
-                                                <td>Tues</td>
-                                                <td>Wed</td>
-                                                <td>Thurs</td>
-                                                <td>Fri</td>
-                                                <td>Sat</td>
+                                                <td>Chủ nhật </td>
+                                                <td>Thứ 2</td>
+                                                <td>Thứ 3 </td>
+                                                <td>Thứ 4 </td>
+                                                <td>Thứ 5 </td>
+                                                <td>Thứ 6 </td>
+                                                <td>Thứ 7 </td>
                                             </tr>
                                             </thead>
                                             <tbody>
                                             <tr>
-                                                <td>{{$room->price}} VND</td>
-                                                <td>{{$room->price}} VND</td>
-                                                <td>{{$room->price}} VND</td>
-                                                <td>{{$room->price}} VND</td>
-                                                <td>{{$room->price}} VND</td>
-                                                <td>{{$room->price}} VND</td>
-                                                <td>{{$room->price}} VND</td>
+                                                <td>{{format_price($room->price)}}</td>
+                                                <td>{{format_price($room->price)}}</td>
+                                                <td>{{format_price($room->price)}}</td>
+                                                <td>{{format_price($room->price)}}</td>
+                                                <td>{{format_price($room->price)}}</td>
+                                                <td>{{format_price($room->price)}}</td>
+                                                <td>{{format_price($room->price)}}</td>
                                             </tr>
                                             </tbody>
                                         </table>

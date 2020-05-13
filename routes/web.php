@@ -28,6 +28,7 @@ Route::group(['prefix' => 'user','as' => 'user.'], function () {
     Route::get('/{id}', [DashboardController::class, 'getInfoUser'])->name('info-user');
     Route::post('change-info/{id}', [DashboardController::class, 'changeInfoUser'])->name('update-user');
     Route::get('change-info/{id}', [DashboardController::class, 'getFormChangeInfoUser'])->name('create');
+    Route::get('info-booking/{id}', [DashboardController::class, 'getInfoBook'])->name('info-booking');
     Route::get('change-password/{id}', [DashboardController::class, 'getFormChangePassword'])->name('change-password');
     Route::post('change-password/{id}', [DashboardController::class, 'changePasswordUser'])->name('change-password-user');
 });

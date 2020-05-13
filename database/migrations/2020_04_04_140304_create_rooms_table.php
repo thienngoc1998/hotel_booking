@@ -23,6 +23,7 @@ class CreateRoomsTable extends Migration
             $table->foreign('id_cate')->references('id')->on('categories');
             $table->text('content');
             $table->integer('size')->default(14);
+            $table->integer('number')->default(1);
             $table->boolean('status')->default(0);
             $table->boolean('active')->default(1);
             $table->string('star')->default(1);

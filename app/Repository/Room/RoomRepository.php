@@ -45,6 +45,7 @@ class RoomRepository extends AbstractRepo
                     'status' => $request->status,
                     'active' => $request->active,
                     'price' => $request->price,
+                    'number' => $request->number,
                     'id_service' => 1,
                 ]);
             }
@@ -59,6 +60,7 @@ class RoomRepository extends AbstractRepo
                     'status' => $request->status,
                     'active' => $request->active,
                     'price' => $request->price,
+                    'number' => $request->number,
                     'id_service' => 1,
                 ]);
             }
@@ -81,6 +83,7 @@ class RoomRepository extends AbstractRepo
                 'status' => $request->status,
                 'active' => $request->active,
                 'price' => $request->price,
+                'number' => $request->number,
                 'id_service' => 1,
             ]);
         }
@@ -95,6 +98,7 @@ class RoomRepository extends AbstractRepo
                 'status' => $request->status,
                 'active' => $request->active,
                 'price' => $request->price,
+                'number' => $request->number,
                 'id_service' => 1,
             ]);
         }

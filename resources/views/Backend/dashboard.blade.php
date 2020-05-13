@@ -8,7 +8,7 @@
             <!-- Item -->
             <div class="col-lg-3 col-md-6 col-xs-6">
                 <div class="dashboard-stat color-1">
-                    <div class="dashboard-stat-content"><h4>6</h4> <span>Active Listings</span></div>
+                    <div class="dashboard-stat-content"><h4>{{$room}}</h4> <span>Số lượng Phòng </span></div>
                     <div class="dashboard-stat-icon"><i class="im im-icon-Map2"></i></div>
                     <div class="dashboard-stat-item"><p>Someone bookmarked your listing!</p></div>
                 </div>
@@ -17,7 +17,7 @@
             <!-- Item -->
             <div class="col-lg-3 col-md-6 col-xs-6">
                 <div class="dashboard-stat color-2">
-                    <div class="dashboard-stat-content"><h4>726</h4> <span>Total Bookings</span></div>
+                    <div class="dashboard-stat-content"><h4>{{$service}}</h4> <span>Số lượng dịch vụ </span></div>
                     <div class="dashboard-stat-icon"><i class="im im-icon-Line-Chart"></i></div>
                     <div class="dashboard-stat-item"><p>Someone bookmarked your listing!</p></div>
                 </div>
@@ -27,7 +27,7 @@
             <!-- Item -->
             <div class="col-lg-3 col-md-6 col-xs-6">
                 <div class="dashboard-stat color-3">
-                    <div class="dashboard-stat-content"><h4>95</h4> <span>Total Reviews</span></div>
+                    <div class="dashboard-stat-content"><h4>{{$user}}</h4> <span>Số lượng người dùng </span></div>
                     <div class="dashboard-stat-icon"><i class="im im-icon-Add-UserStar"></i></div>
                     <div class="dashboard-stat-item"><p>Someone bookmarked your listing!</p></div>
                 </div>
@@ -35,7 +35,7 @@
 
             <div class="col-lg-3 col-md-6 col-xs-6">
                 <div class="dashboard-stat color-4">
-                    <div class="dashboard-stat-content"><h4>126</h4> <span>Bookmarks</span></div>
+                    <div class="dashboard-stat-content"><h4>{{$comment}}</h4> <span>Số bình luận </span></div>
                     <div class="dashboard-stat-icon"><i class="im im-icon-Heart"></i></div>
                     <div class="dashboard-stat-item"><p>Someone bookmarked your listing!</p></div>
                 </div>
@@ -44,47 +44,48 @@
         <div class="row">
             <div class="col-lg-12 col-md-12 col-xs-12 traffic">
                 <div class="dashboard-list-box">
-                    <h4 class="gray">Recent Bookings</h4>
+                    <h4 class="gray">Đặt phòng </h4>
                     <div class="table-box">
                         <table class="basic-table">
                             <thead>
                             <tr>
-                                <th>Date</th>
-                                <th>Booking ID</th>
-                                <th>Destination</th>
-                                <th>No of Tickets</th>
-                                <th>Price</th>
+                                <th>ID</th>
+                                <th>Tên </th>
+                                <th>Email</th>
+                                <th>Số điện thoại</th>
+                                <th>Ngày đến </th>
+                                <th>Ngày đi </th>
+                                <th>Số người </th>
+                                <th>Đêm </th>
+                                <th>Phòng  </th>
+                                <th> Tổng tiền </th>
+                                <th>Ngày taọ </th>
+                                <th>Trạng thái </th>
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td>01/01/2017</td>
-                                <td class="t-id">C001</td>
-                                <td>Dubai</td>
-                                <td>5</td>
-                                <td>$300.00</td>
-                            </tr>
-                            <tr>
-                                <td>01/01/2017</td>
-                                <td class="t-id">C081</td>
-                                <td>Grece - Zakynthos</td>
-                                <td>5</td>
-                                <td>$300.00</td>
-                            </tr>
-                            <tr>
-                                <td>01/01/2017</td>
-                                <td class="t-id">C001</td>
-                                <td>Bulgary - Sunny Beach</td>
-                                <td>5</td>
-                                <td>$300.00</td>
-                            </tr>
-                            <tr>
-                                <td>01/01/2017</td>
-                                <td class="t-id">C001</td>
-                                <td>France - Paris</td>
-                                <td>5</td>
-                                <td>$300.00</td>
-                            </tr>
+                            @foreach($books as $book)
+                                <tr>
+                                    <td>{{$book->id}}</td>
+                                    <td>{{$book->username}}</td>
+                                    <td>{{$book->email}}</td>
+                                    <td>{{$book->phone}}</td>
+                                    <td>{{$book->check_in}}</td>
+                                    <td>{{$book->check_out}}</td>
+                                    <td>{{$book->guest}}</td>
+                                    <td>{{$book->nights}}</td>
+                                    <td>{{$book->room->name}}</td>
+                                    <td>{{$book->total}}</td>
+                                    <td>{{$book->created_at->format('d/m/Y')}}</td>
+                                    <td>
+                                        @if($book->status == 0)
+                                            <span class="paid t-box"> Đang chờ </span>
+                                        @elseif($book->status == 1)
+                                            <span class="unpaid t-box"> Nhận phòng </span>
+                                        @endif
+                                    </td>
+                                </tr>
+                            @endforeach
                             </tbody>
                         </table>
                     </div>
@@ -95,146 +96,33 @@
             <!-- Recent Activity -->
             <div class="col-lg-7 col-md-12 col-xs-12 traffic">
                 <div class="dashboard-list-box with-icons margin-top-20">
-                    <h4 class="gray">Recent Activities</h4>
+                    <h4 class="gray">Bình luận mới nhất </h4>
                     <ul>
+                        @foreach($comments as $item)
                         <li>
-                            <i class="list-box-icon sl sl-icon-layers"></i> Your listing <strong><a href="#">Hotel
-                                    Govendor</a></strong> has been approved!
-                            <a href="#" class="close-list-item"><i class="fa fa-close"></i></a>
+                            <i class="list-box-icon sl sl-icon-layers"></i> {{$item->user->name}}<strong> đã bình luận vào </strong> {{$item->room->name}}
                         </li>
-
-                        <li>
-                            <i class="list-box-icon sl sl-icon-star"></i> Kathy Brown left a review
-                            <div class="numerical-rating" data-rating="5.0"></div>
-                            on <strong><a href="#">Burger House</a></strong>
-                            <a href="#" class="close-list-item"><i class="fa fa-close"></i></a>
-                        </li>
-
-                        <li>
-                            <i class="list-box-icon sl sl-icon-heart"></i> Someone bookmarked your <strong><a href="#">Burger
-                                    House</a></strong> listing!
-                            <a href="#" class="close-list-item"><i class="fa fa-close"></i></a>
-                        </li>
-
-                        <li>
-                            <i class="list-box-icon sl sl-icon-star"></i> Kathy Brown left a review
-                            <div class="numerical-rating" data-rating="3.0"></div>
-                            on <strong><a href="#">Airport</a></strong>
-                            <a href="#" class="close-list-item"><i class="fa fa-close"></i></a>
-                        </li>
-
-                        <li>
-                            <i class="list-box-icon sl sl-icon-heart"></i> Someone bookmarked your <strong><a href="#">Burger
-                                    House</a></strong> listing!
-                            <a href="#" class="close-list-item"><i class="fa fa-close"></i></a>
-                        </li>
-
+                        @endforeach
                     </ul>
                 </div>
             </div>
             <div class="col-lg-5 col-md-12 col-xs-12 traffic">
                 <div class="dashboard-list-box margin-top-20 user-list">
-                    <h4 class="gray">User List</h4>
+                    <h4 class="gray">Danh sách người dùng </h4>
                     <ul>
+                        @foreach($users as $item)
                         <li>
                             <div class="user-list-item">
                                 <div class="user-list-image">
-                                    <img src="giaodien/images/comment.jpg" alt="">
+                                    <img src="upload/images/user/{{$item->avatar}}" alt="anh">
                                 </div>
                                 <div class="user-list-content">
-                                    <h4>Loural Teak</h4>
-                                    <span>Post Manager</span>
-                                </div>
-                                <div class="user-btns">
-                                    <a href="#" class="button">View</a>
-                                    <a href="#" class="button">Edit</a>
+                                    <h4>{{$item->name}}</h4>
                                 </div>
                             </div>
                         </li>
-                        <li>
-                            <div class="user-list-item">
-                                <div class="user-list-image">
-                                    <img src="giaodien/images/comment.jpg" alt="">
-                                </div>
-                                <div class="user-list-content">
-                                    <h4>Jim Gordon</h4>
-                                    <span>Post Manager</span>
-                                </div>
-                                <div class="user-btns">
-                                    <a href="#" class="button">View</a>
-                                    <a href="#" class="button">Edit</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="user-list-item">
-                                <div class="user-list-image">
-                                    <img src="giaodien/images/comment.jpg" alt="">
-                                </div>
-                                <div class="user-list-content">
-                                    <h4>Loural Teak</h4>
-                                    <span>Post Manager</span>
-                                </div>
-                                <div class="user-btns">
-                                    <a href="#" class="button">View</a>
-                                    <a href="#" class="button">Edit</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="user-list-item">
-                                <div class="user-list-image">
-                                    <img src="giaodien/images/comment.jpg" alt="">
-                                </div>
-                                <div class="user-list-content">
-                                    <h4>Loural Teak</h4>
-                                    <span>Post Manager</span>
-                                </div>
-                                <div class="user-btns">
-                                    <a href="#" class="button">View</a>
-                                    <a href="#" class="button">Edit</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="user-list-item">
-                                <div class="user-list-image">
-                                    <img src="giaodien/images/comment.jpg" alt="">
-                                </div>
-                                <div class="user-list-content">
-                                    <h4>Joseph Dean</h4>
-                                    <span>Post Manager</span>
-                                </div>
-                                <div class="user-btns">
-                                    <a href="#" class="button">View</a>
-                                    <a href="#" class="button">Edit</a>
-                                </div>
-                            </div>
-                        </li>
+                        @endforeach
                     </ul>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <!-- site traffic -->
-            <div class="col-lg-4 col-md-4 mar-b-30">
-                <div class="dashboard-list-box">
-                    <h4 class="gray">Site Traffic</h4>
-                    <div id="chartContainer" style="height: 250px; width: 100%;"></div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-4 mar-b-30">
-                <div class="dashboard-list-box">
-                    <h4 class="gray">Bar Chart</h4>
-                    <div id="barchart" style="height: 250px; width: 100%;"></div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-4">
-                <div class="dashboard-list-box">
-                    <h4 class="gray">Search Engine</h4>
-                    <div id="piechart" style="height: 250px; width: 100%;"></div>
                 </div>
             </div>
         </div>

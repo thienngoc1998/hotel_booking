@@ -11,6 +11,7 @@ use App\Mail\ResetPasswordMail;
 use App\Models\Book;
 use App\Models\Review;
 use App\Models\Room;
+use App\Models\Service;
 use App\Models\User;
 use App\Star;
 use Illuminate\Http\Request;
@@ -28,7 +29,17 @@ class DashboardController extends Controller
     public  $model;
     public function index()
     {
-        return view('Backend.dashboard');
+        $room = Room::all()->count();
+        $user = User::all()->count();
+        $service = Service::all()->count();
+        $comment = Review::all()->count();
+        $users = User::orderBy('id','desc')->skip(0)
+            ->take(5)->get();
+        $comments = Review::orderBy('id','desc')->skip(0)
+            ->take(5)->get();
+        $books = Book::orderBy('id','desc')->skip(0)
+            ->take(5)->get();
+        return view('Backend.dashboard',compact('room','service','user','comment','users','comments','books'));
     }
     public function makeMode()
     {
@@ -142,6 +153,12 @@ class DashboardController extends Controller
         return view('Frontend.reset-password');
     }
 
+    public function getInfoBook($id)
+    {
+        $books = Book::where('id_user',$id)->orderBy('id','desc')->get();
+       return view('Frontend.info-booking',compact('books'));
+    }
+
     public function resetPasswordUser(Request $request)
     {
         $password = str_random(8);
@@ -171,19 +188,33 @@ class DashboardController extends Controller
 
     public function bookingRoom($id)
     {
-        if (Session::has('booking'))
+
+        $checkRoom = Room::findOrFail($id);
+        if ($checkRoom->number > 0)
         {
-            Session::put('booking.id_room',$id);
+
+            if (Session::has('booking'))
+            {
+                Session::put('booking.id_room',$id);
+                Session::put('booking.total',$checkRoom->price);
+            }
+            $availability = Session::get('booking');
+            return view('Frontend.booking')->withRoom(Room::findOrFail($id))->withAvailabilit($availability);
         }
-        $availability = Session::get('booking');
-        return view('Frontend.booking')->withRoom(Room::findOrFail($id))->withAvailabilit($availability);
+        else
+        {
+            return back()->withFail('error');
+        }
+
     }
 
     public function confirmBookingRoom(Request $request)
     {
         $availability = Session::get('booking');
-        $book = Book::create(['username'=> $request->name,
-            'email'=> $request->name,
+
+        $book = Book::create([
+            'username'=> $request->name,
+            'email'=> $request->email,
             'phone'=> $request->phone,
             'note'=> $request->note,
             'guest'=> $availability['guests'],
@@ -191,6 +222,8 @@ class DashboardController extends Controller
             'id_room' => $availability['id_room'],
             'check_in' => $availability['check-in'],
             'check_out' => $availability['check-out'],
+            'total' => $availability['total'],
+            'id_user' => Auth::user()->id
         ]);
         Session::forget('booking');
         return view('Frontend.confirm')->withBook($book);

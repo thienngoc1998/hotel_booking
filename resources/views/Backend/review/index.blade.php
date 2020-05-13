@@ -38,7 +38,8 @@ Danh sách review
                                 <li>
                                     <div class="avatar"><img src="http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;s=70" alt=""></div>
                                     <div class="comment-content"><div class="arrow-comment"></div>
-                                            <div class="comment-by">{{$review->user->name}}<div class="comment-by-listing" style="padding-left: 5px;">on <a href="#" style="padding-left: 10px;">{{$review->room->name}}</a></div> <span class="date">{{$review->created_at->format('d/m/Y')}}</span>
+                                            <div class="comment-by">{{$review->user->name}}<div class="comment-by-listing" style="padding-left: 5px;">on <a href="#" style="padding-left: 10px;">{{$review->room->name}}</a></div>
+                                                <span class="date">{{$review->created_at->format('d/m/Y')}}</span>
                                             <div class="star-rating" data-rating="5"></div>
                                         </div>
                                         <p>{{$review->content}}</p>

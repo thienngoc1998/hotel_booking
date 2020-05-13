@@ -89,7 +89,7 @@
         <div class="row">
             <div class="col-8 col-offset-2">
                 <label for="email"><b>Username</b></label>
-                <input type="email" placeholder="Địa chỉ email" name="email" required>
+                <input type="email" placeholder="Địa chỉ email" name="email" value="{{old('email')}}" required>
 
                 <label for="password"><b>Password</b></label>
                 <input type="password" placeholder="Mật khẩu" name="password" required>

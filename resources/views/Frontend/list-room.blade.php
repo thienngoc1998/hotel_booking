@@ -74,7 +74,7 @@
                             @endforeach
                         </div>
                         <div class="ratings list-sidebar-item">
-                            <h4>Ratings</h4>
+                            <h4> Đánh gía </h4>
                             <div class="pretty p-default p-thick p-pulse mar-bottom-15">
                                 <input type="checkbox"  class="common_selector star" value="5">
                                 <div class="state p-warning-o">
@@ -210,7 +210,6 @@
 
             function filter_data() {
                 let sort = $('#dropDownId').val();
-                console.log(sort);
                 let categories = get_filter('type_room');
                 let star = get_filter('star');
                 $.ajax({
@@ -223,6 +222,7 @@
                             $('.list-grid').html("<h3 class='text-center'>Không có dữ liệu </h3>");
                         } else {
                             $('.list-grid').html(data.html);
+                            $('.btn-orange').hide();
                         }
 
 

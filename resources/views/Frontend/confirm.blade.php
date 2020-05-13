@@ -1,17 +1,17 @@
 @extends('Frontend.layout.index')
 
 @section('title')
-    Xác nhận
+    {{__('step.step-4')}}
 @endsection
 @section('content')
     <section class="breadcrumb-outer">
         <div class="container">
             <div class="breadcrumb-content">
-                <h2>  Xác nhận đặt phòng </h2>
+                <h2> {{__('step.step-4')}} </h2>
                 <nav aria-label="breadcrumb">
                     <ul class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
-                        <li class="breadcrumb-item active" aria-current="page"> Xác nhận đặt phòng </li>
+                        <li class="breadcrumb-item active" aria-current="page"> {{__('step.step-4')}} </li>
                     </ul>
                 </nav>
             </div>
@@ -20,23 +20,23 @@
     <section class="content">
         <div class="container">
             <div class="reservation-links text-center">
-                <h2 class="mar-bottom-60 text-capitalize">Make Your Reservation</h2>
+                <h2 class="mar-bottom-60 text-capitalize">{{__('step.title')}}</h2>
                 <div class="reservation-links-content">
                     <div class="res-item">
                         <span class="active"><i class="fa fa-check"></i></span>
-                        <p>Check Availability</p>
+                        <p>{{__('step.step-1')}}</p>
                     </div>
                     <div class="res-item">
                         <span class="active"><i class="fa fa-check"></i></span>
-                        <p>Select Room</p>
+                        <p>{{__('step.step-2')}}</p>
                     </div>
                     <div class="res-item">
                         <span class="active"><i class="fa fa-check"></i></span>
-                        <p>Booking</p>
+                        <p>{{__('step.step-3')}}</p>
                     </div>
                     <div class="res-item">
                         <span class="active">4</span>
-                        <p>Confirmation</p>
+                        <p>{{__('step.step-4')}}</p>
                     </div>
                 </div>
             </div>

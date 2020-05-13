@@ -11,7 +11,7 @@ class Room extends Model
     use  SoftDeletes;
 
     protected $table = 'rooms';
-    protected $fillable =['name','description','avatar','amount_bed','id_cate','content','size','status','active','price','id_service','star'];
+    protected $fillable =['name','description','avatar','amount_bed','id_cate','content','size','status','active','price','id_service','star','number'];
     protected $dates = ['created_at','deleted_at','updated_at'];
 
 

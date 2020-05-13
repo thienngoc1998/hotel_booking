@@ -25,3 +25,12 @@ if (! function_exists('include_route_files')) {
         }
     }
 }
+
+
+if (! function_exists('format_price')) {
+    function format_price($number)
+    {
+        $number = intval($number);
+        return $number = number_format($number,0,',','.') ." VND/đêm" ;
+    }
+}

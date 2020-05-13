@@ -24,7 +24,7 @@
                     <div class="list-content">
                         <div class="list-grid">
                             <div class="panel panel-default">
-                                <div class="panel-heading">Panel Heading</div>
+                                <div class="panel-heading">Thông tin tài khoản</div>
                                 <div class="panel-body">
                                     <div class="row">
                                         <div class="col-sm-6 col-md-4">

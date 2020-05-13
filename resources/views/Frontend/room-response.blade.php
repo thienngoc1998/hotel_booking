@@ -7,7 +7,7 @@
             <div class="grid-content">
                 <div class="room-title">
                     <h4>{{$room->name}}</h4>
-                    <p class="mar-top-5"><i class="fa fa-tag"></i> {{$room->price}} VND/Night</p>
+                    <p class="mar-top-5"><i class="fa fa-tag"></i> {{format_price($room->price)}}</p>
                     <div class="deal-rating">
                         @if($room->star == 1)
                             <span class="fa fa-star checked"></span>

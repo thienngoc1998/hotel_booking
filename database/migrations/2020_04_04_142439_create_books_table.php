@@ -26,6 +26,9 @@ class CreateBooksTable extends Migration
             $table->foreign('id_room')->references('id')->on('rooms');
             $table->string('check_in');
             $table->string('check_out');
+            $table->string('total');
+            $table->integer('id_user')->unsigned();
+            $table->foreign('id_user')->references('id')->on('users');
             $table->softDeletes();
             $table->timestamps();
         });

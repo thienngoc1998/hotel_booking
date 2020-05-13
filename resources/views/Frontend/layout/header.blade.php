@@ -18,8 +18,9 @@
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-user" aria-hidden="true"></i> {{Auth::user()->name}}
                                 <span class="caret"></span></a>
                             <ul class="dropdown-menu" style="background-color: #343a40;">
-                                <li><a href="#"></a></li>
+                                <li><a href="#">Menu</a></li>
                                 <li><a href="{{route('user.info-user',Auth::user()->id)}}"> Tài khoản</a></li>
+                                <li><a href="{{route('user.info-booking',Auth::user()->id)}}"> Thông tin đặt phòng</a></li>
                                 <li><a href="{{route('home-logout')}}"> Đăng xuất </a></li>
                             </ul>
                         </li>
@@ -61,7 +62,7 @@
                         </li>
                     </ul>
                     <div class="nav-btn">
-                        <a href="{{route('frontend.availability')}}" class="btn btn-orange">Book Now</a>
+                        <a href="{{route('frontend.availability')}}" class="btn btn-orange">{{__('step.booking-now')}}</a>
                     </div>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->

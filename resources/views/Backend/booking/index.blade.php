@@ -18,11 +18,14 @@
                             <th>Tên </th>
                             <th>Email</th>
                             <th>Số điện thoại</th>
+                            <th>Ngày đến </th>
+                            <th>Ngày đi </th>
                             <th>Số người </th>
                             <th>Đêm </th>
                             <th>Phòng  </th>
-                            <th>Trạng thái </th>
+                            <th> Tổng tiền </th>
                             <th>Ngày taọ </th>
+                            <th>Trạng thái </th>
                             <th>Action</th>
                         </tr>
                         </thead>
@@ -33,9 +36,13 @@
                                 <td>{{$book->username}}</td>
                                 <td>{{$book->email}}</td>
                                 <td>{{$book->phone}}</td>
+                                <td>{{$book->check_in}}</td>
+                                <td>{{$book->check_out}}</td>
                                 <td>{{$book->guest}}</td>
                                 <td>{{$book->nights}}</td>
-                                <td><a href="{{route('frontend.detail-room',$book->id_room)}}">{{$book->room->name}}</a></td>
+                                <td>{{$book->room->name}}</td>
+                                <td>{{$book->total}}</td>
+                                <td>{{$book->created_at->format('d/m/Y')}}</td>
                                 <td>
                                     @if($book->status == 0)
                                     <span class="paid t-box"> Đang chờ </span>
@@ -43,7 +50,7 @@
                                      <span class="unpaid t-box"> Nhận phòng </span>
                                     @endif
                                 </td>
-                                <td>{{$book->created_at->format('d/m/Y')}}</td>
+
                                 <td>
                                     <a href="#"  data-toggle="modal" data-target="#modalActive" data-active-url="{{route('admin.book-change-status', $book->id)}}" class="button success"><i class="fas fa-flag"></i></a>
                                     <a href="#" class="button gray" data-toggle="modal" data-target="#modalDelete" data-delete-url="{{route('admin.book-destroy', $book->id)}}"><i class="fas fa-times"></i></a>

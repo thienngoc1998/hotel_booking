@@ -56,6 +56,8 @@
                                 <input type="text" name="size" value="{{$room->size}}" >
                                 <label class="margin-top-0">Gía : </label>
                                 <input type="text" name="price" value="{{$room->price}}">
+                                <label class="margin-top-0">Số lượng : </label>
+                                <input type="text" name="number" value="{{$room->number}}">
                                 <label>Nổi bật: *</label>
                                 @if($room->status == 1)
                                 <input type="radio" name="status" value="1" checked >Có
