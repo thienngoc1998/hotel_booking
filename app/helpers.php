@@ -34,3 +34,11 @@ if (! function_exists('format_price')) {
         return $number = number_format($number,0,',','.') ." VND/đêm" ;
     }
 }
+
+if (! function_exists('format_price_book')) {
+    function format_price_book($number)
+    {
+        $number = intval($number);
+        return $number = number_format($number,0,',','.');
+    }
+}

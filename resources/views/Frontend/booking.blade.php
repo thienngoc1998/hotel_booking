@@ -96,85 +96,21 @@
                             @if(Auth::check())
                                 <form method="post" action="{{route('frontend.confirm-booking-room')}}">
                                     @csrf
-                                    {{--                            <div class="extra-services mar-top-50">--}}
-                                    {{--                                <h4 class="mar-bottom-30">Add Extra Services</h4>--}}
-                                    {{--                                <ul>--}}
-                                    {{--                                    <li>--}}
-                                    {{--                                        <span class="pretty p-default p-thick p-pulse mar-bottom-15">--}}
-                                    {{--                                            <input type="checkbox">--}}
-                                    {{--                                            <span class="state p-warning-o">--}}
-                                    {{--                                                <label>10 Bedrooms</label>--}}
-                                    {{--                                            </span>--}}
-                                    {{--                                        </span>--}}
-                                    {{--                                    </li>--}}
-                                    {{--                                    <li>--}}
-                                    {{--                                        <span class="pretty p-default p-thick p-pulse mar-bottom-15">--}}
-                                    {{--                                            <input type="checkbox">--}}
-                                    {{--                                            <span class="state p-warning-o">--}}
-                                    {{--                                                <label>Wifi</label>--}}
-                                    {{--                                            </span>--}}
-                                    {{--                                        </span>--}}
-                                    {{--                                    </li>--}}
-                                    {{--                                    <li>--}}
-                                    {{--                                        <span class="pretty p-default p-thick p-pulse mar-bottom-15">--}}
-                                    {{--                                            <input type="checkbox">--}}
-                                    {{--                                            <span class="state p-warning-o">--}}
-                                    {{--                                                <label>Television</label>--}}
-                                    {{--                                            </span>--}}
-                                    {{--                                        </span>--}}
-                                    {{--                                    </li>--}}
-                                    {{--                                    <li>--}}
-                                    {{--                                        <span class="pretty p-default p-thick p-pulse mar-bottom-15">--}}
-                                    {{--                                            <input type="checkbox">--}}
-                                    {{--                                            <span class="state p-warning-o">--}}
-                                    {{--                                                <label>Hot Water</label>--}}
-                                    {{--                                            </span>--}}
-                                    {{--                                        </span>--}}
-                                    {{--                                    </li>--}}
-                                    {{--                                    <li>--}}
-                                    {{--                                        <span class="pretty p-default p-thick p-pulse mar-bottom-15">--}}
-                                    {{--                                            <input type="checkbox">--}}
-                                    {{--                                            <span class="state p-warning-o">--}}
-                                    {{--                                                <label>Dinner</label>--}}
-                                    {{--                                            </span>--}}
-                                    {{--                                        </span>--}}
-                                    {{--                                    </li>--}}
-                                    {{--                                    <li>--}}
-                                    {{--                                        <span class="pretty p-default p-thick p-pulse mar-bottom-15">--}}
-                                    {{--                                            <input type="checkbox">--}}
-                                    {{--                                            <span class="state p-warning-o">--}}
-                                    {{--                                                <label>Quick Services</label>--}}
-                                    {{--                                            </span>--}}
-                                    {{--                                        </span>--}}
-                                    {{--                                    </li>--}}
-                                    {{--                                    <li>--}}
-                                    {{--                                        <span class="pretty p-default p-thick p-pulse mar-bottom-15">--}}
-                                    {{--                                            <input type="checkbox">--}}
-                                    {{--                                            <span class="state p-warning-o">--}}
-                                    {{--                                                <label>A/C</label>--}}
-                                    {{--                                            </span>--}}
-                                    {{--                                        </span>--}}
-                                    {{--                                    </li>--}}
-                                    {{--                                    <li>--}}
-                                    {{--                                        <span class="pretty p-default p-thick p-pulse mar-bottom-15">--}}
-                                    {{--                                            <input type="checkbox">--}}
-                                    {{--                                            <span class="state p-warning-o">--}}
-                                    {{--                                                <label>Laundry Services</label>--}}
-                                    {{--                                            </span>--}}
-                                    {{--                                        </span>--}}
-                                    {{--                                    </li>--}}
-                                    {{--                                    <li>--}}
-                                    {{--                                        <span class="pretty p-default p-thick p-pulse mar-bottom-15">--}}
-                                    {{--                                            <input type="checkbox">--}}
-                                    {{--                                            <span class="state p-warning-o">--}}
-                                    {{--                                                <label>AirPort Taxi</label>--}}
-                                    {{--                                            </span>--}}
-                                    {{--                                        </span>--}}
-                                    {{--                                    </li>--}}
-                                    {{--                                </ul>--}}
-                                    {{--                            </div>--}}
-
-
+                                    <div class="extra-services mar-top-50">
+                                        <h4 class="mar-bottom-30">Thêm dịch vụ </h4>
+                                        <ul>
+                                            @foreach($services as $service)
+                                                <li>
+                                                    <span class="pretty p-default p-thick p-pulse mar-bottom-15">
+                                                        <input type="checkbox" name="service[]" value="{{$service->id}}">
+                                                        <span class="state p-warning-o">
+                                                            <label>{{$service->name}}</label>
+                                                        </span>
+                                                    </span>
+                                                </li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
                                     <div class="personal-info mar-top-50">
                                         <div class="form-title">
                                             <span>1</span>
@@ -183,17 +119,20 @@
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <input type="text" placeholder="Họ tên " name="name" value="{{Auth::user()->name}}">
+                                                    <input type="text" placeholder="Họ tên " name="name"
+                                                           value="{{Auth::user()->name}}">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <input type="email" placeholder=" Địa chỉ email" name="email" value="{{Auth::user()->email}}">
+                                                    <input type="email" placeholder=" Địa chỉ email" name="email"
+                                                           value="{{Auth::user()->email}}">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <input type="text" placeholder=" Số điện thoại " name="phone" value="{{Auth::user()->phone}}">
+                                                    <input type="text" placeholder=" Số điện thoại " name="phone"
+                                                           value="{{Auth::user()->phone}}">
                                                 </div>
                                             </div>
                                             <div class="col-md-12">

@@ -41,7 +41,7 @@
                                 <td>{{$book->guest}}</td>
                                 <td>{{$book->nights}}</td>
                                 <td>{{$book->room->name}}</td>
-                                <td>{{$book->total}}</td>
+                                <td>{{format_price_book($book->total)}}</td>
                                 <td>{{$book->created_at->format('d/m/Y')}}</td>
                                 <td>
                                     @if($book->status == 0)

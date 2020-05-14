@@ -6,6 +6,7 @@ use App\Article;
 use App\Models\Category;
 use App\Models\Review;
 use App\Models\Room;
+use App\Models\Service;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -37,6 +38,9 @@ class AppServiceProvider extends ServiceProvider
       });
         view()->composer(['Frontend.list-room', 'Frontend.select-room'],function ($view) {
             $view->withCategory(Category::all());
+        });
+        view()->composer('Frontend.booking',function ($view) {
+            $view->withServices(Service::all());
         });
         view()->composer(['Frontend.dashboard','Frontend.room-detail'],function ($view) {
             $articles = Article::orderBy('id','desc')->skip(0)
