@@ -26,7 +26,7 @@
                             <th> Tổng tiền </th>
                             <th>Ngày taọ </th>
                             <th>Trạng thái </th>
-                            <th>Action</th>
+                            <th>Thao tác</th>
                         </tr>
                         </thead>
                         <tbody>

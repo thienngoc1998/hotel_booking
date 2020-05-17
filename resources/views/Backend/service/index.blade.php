@@ -9,7 +9,7 @@
             <div class="col-lg-12 col-md-12 col-xs-12">
                 <div class="dashboard-list-box">
 
-                    <h4 class="gray">Service</h4>
+                    <h4 class="gray">Dịch vụ</h4>
                     <a class="btn btn-success"  href="{{route('admin.add-service')}}" style="margin: 20px 0;"><i class="fas fa-plus"></i>Thêm </a>
                     <div class="table-box">
                         <table class="basic-table booking-table">

@@ -14,7 +14,7 @@ class RoomSeed extends Seeder
         \Illuminate\Support\Facades\DB::table('rooms')->insert([
             'name' => 'STANDARD SUITE',
             'avatar' => 'grid1.jpg',
-            'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex neque, sodales accumsan sapien et, auctor vulputate quam donec vitae consectetur turpis',
+            'description' => 'Từ quán Café, quý khách sẽ có được cái nhìn toàn cảnh núi sông Đăkbla được định hình bằng những vòm tre. Nhà hàng khách sạn phục vụ các món ăn đặc sản Kon Tum, đây còn là nơi tổ chức tiệc cưới, tiệc chiêu đãi.',
             'amount_bed' => 3,
             'id_cate' => 1,
             'content' =>'sssss',
@@ -26,7 +26,7 @@ class RoomSeed extends Seeder
         \Illuminate\Support\Facades\DB::table('rooms')->insert([
             'name' => 'DELUXE SUITE',
             'avatar' => 'grid2.jpg',
-            'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex neque, sodales accumsan sapien et, auctor vulputate quam donec vitae consectetur turpis',
+            'description' => 'Từ quán Café, quý khách sẽ có được cái nhìn toàn cảnh núi sông Đăkbla được định hình bằng những vòm tre. Nhà hàng khách sạn phục vụ các món ăn đặc sản Kon Tum, đây còn là nơi tổ chức tiệc cưới, tiệc chiêu đãi.',
             'amount_bed' => 3,
             'id_cate' => 1,
             'content' =>'sssss',
@@ -37,7 +37,7 @@ class RoomSeed extends Seeder
         \Illuminate\Support\Facades\DB::table('rooms')->insert([
             'name' => 'SUPERIOR SUITE',
             'avatar' => 'grid3.jpg',
-            'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex neque, sodales accumsan sapien et, auctor vulputate quam donec vitae consectetur turpis',
+            'description' => 'Từ quán Café, quý khách sẽ có được cái nhìn toàn cảnh núi sông Đăkbla được định hình bằng những vòm tre. Nhà hàng khách sạn phục vụ các món ăn đặc sản Kon Tum, đây còn là nơi tổ chức tiệc cưới, tiệc chiêu đãi.',
             'amount_bed' => 3,
             'id_cate' => 1,
             'content' =>'sssss',
@@ -48,7 +48,7 @@ class RoomSeed extends Seeder
         \Illuminate\Support\Facades\DB::table('rooms')->insert([
             'name' => 'NORMAL SUITE',
             'avatar' => 'grid4.jpg',
-            'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex neque, sodales accumsan sapien et, auctor vulputate quam donec vitae consectetur turpis',
+            'description' => 'Từ quán Café, quý khách sẽ có được cái nhìn toàn cảnh núi sông Đăkbla được định hình bằng những vòm tre. Nhà hàng khách sạn phục vụ các món ăn đặc sản Kon Tum, đây còn là nơi tổ chức tiệc cưới, tiệc chiêu đãi.',
             'amount_bed' => 3,
             'id_cate' => 1,
             'content' =>'sssss',
@@ -59,7 +59,7 @@ class RoomSeed extends Seeder
         \Illuminate\Support\Facades\DB::table('rooms')->insert([
             'name' => 'ROYAL SUITE',
             'avatar' => 'grid5.jpg',
-            'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex neque, sodales accumsan sapien et, auctor vulputate quam donec vitae consectetur turpis',
+            'description' => 'Từ quán Café, quý khách sẽ có được cái nhìn toàn cảnh núi sông Đăkbla được định hình bằng những vòm tre. Nhà hàng khách sạn phục vụ các món ăn đặc sản Kon Tum, đây còn là nơi tổ chức tiệc cưới, tiệc chiêu đãi.',
             'amount_bed' => 3,
             'id_cate' => 1,
             'content' =>'sssss',
