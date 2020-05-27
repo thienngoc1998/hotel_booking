@@ -10,7 +10,7 @@
                 <div class="dashboard-stat color-1">
                     <div class="dashboard-stat-content"><h4>{{$room}}</h4> <span>Số lượng Phòng </span></div>
                     <div class="dashboard-stat-icon"><i class="im im-icon-Map2"></i></div>
-                    <div class="dashboard-stat-item"><p>Someone bookmarked your listing!</p></div>
+                    <div class="dashboard-stat-item"><p>Tổng số lượng phòng</p></div>
                 </div>
             </div>
 
@@ -19,7 +19,7 @@
                 <div class="dashboard-stat color-2">
                     <div class="dashboard-stat-content"><h4>{{$service}}</h4> <span>Số lượng dịch vụ </span></div>
                     <div class="dashboard-stat-icon"><i class="im im-icon-Line-Chart"></i></div>
-                    <div class="dashboard-stat-item"><p>Someone bookmarked your listing!</p></div>
+                    <div class="dashboard-stat-item"><p>Tổng số lượng dịch vụ</p></div>
                 </div>
             </div>
 
@@ -29,7 +29,7 @@
                 <div class="dashboard-stat color-3">
                     <div class="dashboard-stat-content"><h4>{{$user}}</h4> <span>Số lượng người dùng </span></div>
                     <div class="dashboard-stat-icon"><i class="im im-icon-Add-UserStar"></i></div>
-                    <div class="dashboard-stat-item"><p>Someone bookmarked your listing!</p></div>
+                    <div class="dashboard-stat-item"><p>Tổng số lượng người dùng</p></div>
                 </div>
             </div>
 
@@ -37,7 +37,7 @@
                 <div class="dashboard-stat color-4">
                     <div class="dashboard-stat-content"><h4>{{$comment}}</h4> <span>Số bình luận </span></div>
                     <div class="dashboard-stat-icon"><i class="im im-icon-Heart"></i></div>
-                    <div class="dashboard-stat-item"><p>Someone bookmarked your listing!</p></div>
+                    <div class="dashboard-stat-item"><p>Tổng số lượng bình luận</p></div>
                 </div>
             </div>
         </div>
@@ -50,7 +50,7 @@
                             <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Tên </th>
+                                <th>Họ Tên </th>
                                 <th>Email</th>
                                 <th>Số điện thoại</th>
                                 <th>Ngày đến </th>

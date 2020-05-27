@@ -15,7 +15,7 @@
                         <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Tên </th>
+                            <th>Họ Tên </th>
                             <th>Email</th>
                             <th>Số điện thoại</th>
                             <th>Ngày đến </th>

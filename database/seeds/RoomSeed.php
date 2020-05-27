@@ -12,7 +12,7 @@ class RoomSeed extends Seeder
     public function run()
     {
         \Illuminate\Support\Facades\DB::table('rooms')->insert([
-            'name' => 'STANDARD SUITE',
+            'name' => 'Phòng thường',
             'avatar' => 'grid1.jpg',
             'description' => 'Từ quán Café, quý khách sẽ có được cái nhìn toàn cảnh núi sông Đăkbla được định hình bằng những vòm tre. Nhà hàng khách sạn phục vụ các món ăn đặc sản Kon Tum, đây còn là nơi tổ chức tiệc cưới, tiệc chiêu đãi.',
             'amount_bed' => 3,
@@ -24,7 +24,7 @@ class RoomSeed extends Seeder
             'id_service' =>1
         ]);
         \Illuminate\Support\Facades\DB::table('rooms')->insert([
-            'name' => 'DELUXE SUITE',
+            'name' => 'Phòng giường đơn',
             'avatar' => 'grid2.jpg',
             'description' => 'Từ quán Café, quý khách sẽ có được cái nhìn toàn cảnh núi sông Đăkbla được định hình bằng những vòm tre. Nhà hàng khách sạn phục vụ các món ăn đặc sản Kon Tum, đây còn là nơi tổ chức tiệc cưới, tiệc chiêu đãi.',
             'amount_bed' => 3,
@@ -35,7 +35,7 @@ class RoomSeed extends Seeder
             'id_service' =>1
         ]);
         \Illuminate\Support\Facades\DB::table('rooms')->insert([
-            'name' => 'SUPERIOR SUITE',
+            'name' => 'Phòng Giường Đôi Nhỏ',
             'avatar' => 'grid3.jpg',
             'description' => 'Từ quán Café, quý khách sẽ có được cái nhìn toàn cảnh núi sông Đăkbla được định hình bằng những vòm tre. Nhà hàng khách sạn phục vụ các món ăn đặc sản Kon Tum, đây còn là nơi tổ chức tiệc cưới, tiệc chiêu đãi.',
             'amount_bed' => 3,
@@ -46,7 +46,7 @@ class RoomSeed extends Seeder
             'id_service' =>1
         ]);
         \Illuminate\Support\Facades\DB::table('rooms')->insert([
-            'name' => 'NORMAL SUITE',
+            'name' => 'Phòng Giường Đôi Lớn',
             'avatar' => 'grid4.jpg',
             'description' => 'Từ quán Café, quý khách sẽ có được cái nhìn toàn cảnh núi sông Đăkbla được định hình bằng những vòm tre. Nhà hàng khách sạn phục vụ các món ăn đặc sản Kon Tum, đây còn là nơi tổ chức tiệc cưới, tiệc chiêu đãi.',
             'amount_bed' => 3,
@@ -57,7 +57,7 @@ class RoomSeed extends Seeder
             'id_service' =>1
         ]);
         \Illuminate\Support\Facades\DB::table('rooms')->insert([
-            'name' => 'ROYAL SUITE',
+            'name' => 'Phòng Giường Cỡ Lớn',
             'avatar' => 'grid5.jpg',
             'description' => 'Từ quán Café, quý khách sẽ có được cái nhìn toàn cảnh núi sông Đăkbla được định hình bằng những vòm tre. Nhà hàng khách sạn phục vụ các món ăn đặc sản Kon Tum, đây còn là nơi tổ chức tiệc cưới, tiệc chiêu đãi.',
             'amount_bed' => 3,

@@ -3,10 +3,14 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        body {font-family: Arial, Helvetica, sans-serif;}
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
         h2 {
             text-align: center;
         }
+
         form {
             border: 3px solid #f1f1f1;
             height: 400px;
@@ -69,6 +73,7 @@
                 display: block;
                 float: none;
             }
+
             .cancelbtn {
                 width: 100%;
             }
@@ -77,35 +82,24 @@
 </head>
 <body>
 
-<h2 class="text-center">Login Form</h2>
+<h2 class="text-center">Đăng nhập trang quản trị</h2>
 
 <form action="{{route('admin.login')}}" method="post">
     @csrf
     <div class="imgcontainer">
-        <img src="../../../public/img_avatar2.png" alt="Avatar" class="avatar" >
+        <img src="/img_avatar2.png" alt="Avatar" class="avatar">
     </div>
 
     <div class="container">
         <div class="row">
             <div class="col-8 col-offset-2">
-                <label for="email"><b>Username</b></label>
+                <label for="email"><b>Tài khoản</b></label>
                 <input type="email" placeholder="Địa chỉ email" name="email" value="{{old('email')}}" required>
-
-                <label for="password"><b>Password</b></label>
+                <label for="password"><b>Mật khẩu </b></label>
                 <input type="password" placeholder="Mật khẩu" name="password" required>
-
-                <button type="submit">Login</button>
-                <label>
-                    <input type="checkbox" checked="checked" name="remember"> Remember me
-                </label>
+                <button type="submit">Đăng nhập</button>
             </div>
         </div>
-
-    </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-        <button type="button" class="cancelbtn">Cancel</button>
-        <span class="psw">Forgot <a href="#">password?</a></span>
     </div>
 </form>
 

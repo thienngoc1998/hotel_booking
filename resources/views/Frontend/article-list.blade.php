@@ -33,12 +33,9 @@
                                         <p class="date">{{$article->created_at->format('d/m/Y')}}</p>
                                         <h4>{{$article->title}}</h4>
                                         <div class="room-services">
-                                            <ul>
-                                                <li><i class="fa fa-user" aria-hidden="true"></i> By Jack Daniels</li>
-                                            </ul>
                                         </div>
                                         <p>{{$article->desc}}</p>
-                                        <a href="{{route('frontend.article-detail',$article->id)}}">READ MORE <i class="fas fa-angle-double-right"></i></a>
+                                        <a href="{{route('frontend.article-detail',$article->id)}}">Đọc thêm <i class="fas fa-angle-double-right"></i></a>
                                     </div>
                                 </div>
                             </div>

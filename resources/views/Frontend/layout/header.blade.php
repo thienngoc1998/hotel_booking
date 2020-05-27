@@ -4,8 +4,8 @@
         <div class="container">
             <div class="links links-left">
                 <ul>
-                    <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>syquangbn@gmail.com</a></li>
-                    <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i> 0977-222-333</a></li>
+                    <li><a href="javascrip:void(0)"><i class="fa fa-envelope" aria-hidden="true"></i>syquangbn@gmail.com</a></li>
+                    <li><a href="javascrip:void(0)"><i class="fa fa-phone" aria-hidden="true"></i> 0977-222-333</a></li>
                 </ul>
             </div>
             <div class="links links-right pull-right">
@@ -15,10 +15,10 @@
                         <li><a href="{{route('getFormRegister')}}" ><i class="fa fa-pen" aria-hidden="true"></i>  Đăng ký</a></li>
                     @else
                         <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-user" aria-hidden="true"></i> {{Auth::user()->name}}
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="javascrip:void(0)"><i class="fa fa-user" aria-hidden="true"></i> {{Auth::user()->name}}
                                 <span class="caret"></span></a>
-                            <ul class="dropdown-menu" style="background-color: #343a40;">
-                                <li><a href="#">Menu</a></li>
+                            <ul class="dropdown-menu" style="background-color: javascrip:void(0)343a40;">
+                                <li><a href="javascrip:void(0)">Menu</a></li>
                                 <li><a href="{{route('user.info-user',Auth::user()->id)}}"> Tài khoản</a></li>
                                 <li><a href="{{route('user.info-booking',Auth::user()->id)}}"> Thông tin đặt phòng</a></li>
                                 <li><a href="{{route('home-logout')}}"> Đăng xuất </a></li>
@@ -27,10 +27,10 @@
                     @endif
                     <li>
                         <ul class="social-links">
-                            <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fab fa-google-plus" aria-hidden="true"></i></a></li>
+                            <li><a href="javascrip:void(0)"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="javascrip:void(0)"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href="javascrip:void(0)"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+                            <li><a href="javascrip:void(0)"><i class="fab fa-google-plus" aria-hidden="true"></i></a></li>
                         </ul>
                     </li>
                 </ul>

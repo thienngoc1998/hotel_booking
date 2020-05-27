@@ -346,12 +346,10 @@
                                     </h4>
                                     <div class="room-services mar-bottom-10">
                                         <ul>
-                                            <li><a href="single-right.html"><i class="fa fa-user"
-                                                                               aria-hidden="true"></i> By admin</a></li>
                                         </ul>
                                     </div>
                                     <p>{{$article->desc}}</p>
-                                    <a href="{{route('frontend.article-detail',$article->id)}}">READ MORE <i
+                                    <a href="{{route('frontend.article-detail',$article->id)}}">Đọc thêm <i
                                             class="fas fa-angle-double-right"></i></a>
                                 </div>
                             </div>
