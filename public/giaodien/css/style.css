@@ -1946,8 +1946,8 @@ section.about-style-3 .intro-thumb .intro-img-3 {
 }
 .deal-rating{
 	position: absolute;
-	right: 0;
-	top: 4px;
+    right: 0;
+    top: 40px;
 }
 
 .room-btns.mar-top-20{margin-top: 16px;}
